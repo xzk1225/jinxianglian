@@ -1,0 +1,10 @@
+/* pages/my/page/geren/gongzuo.wxss */
+page{display: flex;justify-content: center;flex-direction: column;align-items: center;}
+.header{height: 85rpx;line-height: 85rpx;background: #f8f8f8;width: 100%;display: flex;justify-content: center;font-size: 24rpx;}
+.header text{width: 704rpx;}
+.content{width: 100%;border-bottom: 2rpx solid #eee;display: flex;justify-content: center;}
+.content_list{display: flex;width: 704rpx;justify-content: space-between;line-height: 100rpx;font-size: 28rpx;align-items: center;}
+.content_list input{font-size:28rpx; text-align: right;}
+image{width: 14rpx;height: 24rpx;margin-left: 25rpx;}
+textarea{width: 674rpx;font-size: 30rpx;padding: 15rpx;}
+button{width: 704rpx;color: #fff;background: #2f91e8;margin-top: 60rpx;}

@@ -1,0 +1,4 @@
+.resume{display: flex;justify-content: space-around;align-items: center;height: 190rpx;}
+.resume image{width: 130rpx;height: 130rpx;}
+.info{font-size:30rpx; margin-left: 22rpx;color: #444444;line-height:48rpx;}
+.resume_list{display: flex;width: 704rpx;}

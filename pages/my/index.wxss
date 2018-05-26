@@ -1,0 +1,18 @@
+/* pages/my/index.wxss */
+@import '/font/iconfont.wxss';
+
+.header{background: #2d95ea;display: flex;justify-content: center;flex-direction: column;align-items: center;color: #fefffe;padding-bottom: 40rpx;font-size: 30rpx;}
+.header .photo{width: 154rpx;height: 154rpx;border-radius: 10rpx;border:4rpx solid #fff;margin-top: 40rpx; }
+.name{margin-top:20rpx;display: flex;}
+.name image{width: 30rpx; height: 30rpx;margin-left: 25rpx;}
+.page{display: flex;justify-content: center;border-bottom: solid 2rpx #f4f4f4;flex-direction: column;align-items: center;}
+.contener_list{width: 704rpx;font-size: 30rpx;display: flex;justify-content: space-between;height: 100rpx;align-items: center;border-bottom: 2rpx solid #eee;}
+.contener_list image{width: 36rpx;height: 36rpx;}
+.contener_list view{display: flex;align-items: center;}
+.contener_list .yjt{width: 16rpx;}
+.left_img{margin-right: 27rpx;}
+.rz text{font-size: 28rpx; color: #378de1;margin-right: 25rpx;}
+.kf{border:none;padding: auto;margin: auto;box-sizing: inherit;border-radius: none;background: none;box-shadow: none;position: relative;}
+.icon-youjiantou1{color: #c3c3c3!important;font-size: 40rpx!important;}
+.ren{display: flex;align-items: center;}
+.kf{width: 704rpx;padding: 0 23rpx;}

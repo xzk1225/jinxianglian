@@ -1,0 +1,77 @@
+<view class='resume_box' style='z-index:2'>
+     <view class='resume'>
+    <view class='resume_list'>
+        <image src='{{info.user_avatar}}'></image>
+          <view class='info'>
+            <view>{{industry[info.industry]}}</view>
+            <view>{{info.home_city}}， <block wx:if='{{info.sex==0}}'>保密</block><block  wx:if='{{info.sex==1}}'>男</block><block  wx:if='{{info.sex==2}}'>女</block>， {{info.user_nick}}</view>
+            <view>{{info.city}}，{{info.job}}, {{xlarr[info.edu]}}， {{jyarr[info.work_year]}}</view>
+            <view wx:if='{{info.is_friend}}'>互为好友可看</view>
+            <view wx:else>{{info.phone}}， {{info.mail}}</view>
+          </view>
+    </view>
+  </view>
+</view>
+<lineer yuan='s' text='求职信息'  fontSize='24rpx'/>
+<view class='jianli_box'>
+    <view class='jianli_list'><text>期望薪资</text><text>{{xcarr[jl_info.wage]}}</text></view>
+     <view class='jianli_list'><text>职位类别</text><text>{{industry[jl_info.industry]}}</text></view>
+      <view class='jianli_list'><text>工作经验</text><text>{{jyarr[jl_info.work_year]}}</text></view>
+       <!-- <view class='jianli_list'><text>擅长领域</text><text>{{jl_info.industry}}</text></view> -->
+</view>
+ <lineer yuan='s' text='工作经历'  fontSize='24rpx'/>
+<view class='jianli_box' wx:for='{{worklist}}'>
+    <view class='jianli_list'><text>公司名称</text><text>{{item.name}}</text></view>
+     <view class='jianli_list'><text>开始时间</text><text>{{item.start_time}}</text></view>
+      <view class='jianli_list'><text>结束时间</text><text>{{item.end_time}}</text></view>
+       <view class='jianli_list'><text>职位名称</text><text>{{item.job}}</text></view>
+       <view class='jianli_list' style='display:flex;flex-direction:column;line-height:40rpx;padding-bottom:35rpx;'><text>工作描述</text><text>{{item.desc}}</text></view>
+</view> 
+ <lineer yuan='s' text='教育背景'  fontSize='24rpx'/>
+<view class='jianli_box' wx:for='{{edulist}}'>
+    <view class='jianli_list'><text>学校名称</text><text>{{item.name}}</text></view>
+     <view class='jianli_list'><text>专业名称</text><text>{{item.job}}</text></view>
+      <view class='jianli_list'><text>最高学历</text><text>{{xlarr[item.edu+1]}}</text></view>
+       <!-- <view class='jianli_list'><text>职位名称</text><text>{{}}</text></view> -->
+        <view class='jianli_list'><text>入学时间</text><text>{{item.start_time}}</text></view>
+      <view class='jianli_list'><text>毕业时间</text><text>{{item.end_time}}</text></view>
+       <view class='jianli_list' style='padding-bottom:20rpx; display:flex;flex-direction:column;line-height:40rpx;'><lineer yuan='s' text='自我评价'  fontSize='24rpx'/><text>{{item.desc}}</text></view>
+</view> 
+<!--这里少一个收藏的。  -->
+<view class='sc'>
+    <view class='sc_left'>
+    <navigator url='./jb?id={{id}}' class='left_list'><image src='/images/jb.png'></image><text>举报</text></navigator>
+      <!-- <view class='left_list'><image src='/images/jb.png'></image><text>举报</text></view> -->
+    <view class='left_list'  bindtap='sc'><image wx:if='{{jl_info.is_like==0}}' src='/images/sc.png'></image><image wx:else src='/images/sc1.png'></image><text>收藏</text></view>
+
+<!-- <view class='left_list' bindtap='sc'><image wx:if='{{jl_info.is_like}}' src='/images/sc1.png'></image><image wx:else src='/images/sc.png'></image></image><text>收藏</text></view> -->
+
+
+   </view>
+     <view class='sc_right' bindtap='ms'>
+      <text class='txt'>发送面试邀请</text>
+      <view class='black'></view>
+       <!-- <text class='txt'>获取联系方式</text>
+       <view class='black'></view> -->
+   </view> 
+  
+ 
+</view> 
+
+<line high='20rpx' bgColor='#eeeeee' />
+<block wx:for='{{list}}' wx:key='index'>
+<navigator hover-class="none" url='../../resume/pages/jianlixiangq?id={{item.id}}&user_id={{item.user_id}}'>
+<jianli info='{{item}}' />
+</navigator>
+</block>
+<jianli />
+
+
+
+
+
+<!--下方绑定  -->
+<view class='bottom'>
+<text bindtap='sc'>收藏</text>
+<view bindtap='ms'>发送面试邀请</view>
+</view>

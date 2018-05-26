@@ -1,0 +1,115 @@
+<view class='header'>
+  <view class='text' wx:for='{{header}}' style='{{id==index? " color:#2e94e8;":" "}}' wx:key='index' data-id='{{index}}' bindtap='changId'>{{item}} <view wx:if='{{id==index}}' class='line'></view></view>
+</view>
+<line bgColor='#f8f8f8' />
+
+<!--我发布的职位  -->
+<block wx:if='{{id==0}}'>
+ 
+    <view class='page' wx:for='{{list}}' wx:key='index'>
+    <navigator hover-class='none' url='../../indexx/xiangqing/zhiwei?id={{item.id}}&user_id=0'>
+      <view class='zw_box'>
+          <view class='zw_list'>
+            <image class='photo' src='{{item.user_avatar}}'></image>
+            <view class='zw_info'>
+                <text>{{item.job}}</text>
+                <text style='font-size:28rpx;color:#747474;'>发布时间：{{item.add_time}}</text>
+            </view>
+          </view>
+          <navigator url='../gai/zhiwei?id={{item.id}}' hover-class='none'>
+          <view class='zw_bj'  style='color:#2e92e7;'>
+            <image class='bj' src='/images/bj_bj.jpg'></image>
+            <text>编辑</text>
+          </view>
+          </navigator>
+      </view>
+      </navigator>
+    </view>
+    
+</block>
+<!-- 我收到的简历  -->
+<block wx:elif='{{id==1}}'>
+
+<form bindsubmit="submit">
+    <checkbox-group name='arr'>
+  
+    <view class='sd_bx' wx:for='{{list}}' wx:key='index'>
+      <navigator hover-class='none' url='../../resume/pages/jianlixiangq?user_id={{item.user_id}}&id={{item.id}}'>
+          <view class='sd'>
+           <view class='left'>
+              <label> <checkbox value='{{item.position}}' checked='{{select}}'></checkbox></label>
+            <view class='sd_info'>
+                <image class='photo' src='{{item.user_avatar}}'></image>
+                <view class='info'>
+                    <text style='font-size:30rpx;'>{{item.user_nick}}求职简历</text>
+                    <text style='font-size:26rpx;'>投递{{item.position}}</text>
+                    <text style='font-size:24rpx;color:#818181;'>投递时间: {{item.add_time}}</text>
+                </view>
+            </view>
+           </view>
+            <view>
+                <text wx:if='{{item.ck}}'  class='ck'>已查看</text>
+                <text wx:else class='ck wck'>未查看</text>
+            </view>
+          </view>
+              </navigator> 
+          </view>
+
+     </checkbox-group> 
+ 
+ <view class='selsct'>
+    <view class='select_box'>
+      <checkbox-group bindchange='chang'>
+        <checkbox id='select' checked='{{select}}' ></checkbox>
+        </checkbox-group>
+        <button formType="submit" class='delete' >删除</button>
+    </view>
+ </view>
+  
+</form>
+ 
+</block>
+
+<block wx:elif='{{id==2}}'>
+
+   <view class='sc_box' wx:for='{{list}}' wx:key='index'>
+   <navigator hover-class='none' url='../../renmai/index?id={{item.user_id}}'>
+      <view class='sc_list'>
+          <image src='{{item.user_avatar}}'></image>
+          <view class='sc_info'>
+              <text style='color:#363636;font-size:30rpx;'>{{item.user_nick}}</text>
+              <!-- <text>{{item.location}} | {{item.sex}} | {{item.education}} | {{item.year}}</text> -->
+              <text>{{item.add_time}}</text>
+          </view>
+      </view>
+      </navigator>
+   </view>
+
+</block>
+
+
+
+
+
+<navigator hover-class="none" url='/pages/fabu/zhiwei'><image class='fb' src='/images/fabu.jpg'></image></navigator>
+
+<!-- 
+我发布的职位数组为  zw_arr
+    发布的职位为  position
+    发布职位的时间为  time
+收到的简历数字为  td_arr
+    收到的简历id 为id
+    收到谁投递的简历名字为  name
+    收到简历投递的职位为   position
+    收到投递简历的时间为   time
+    收到的简历是否查看   ck
+    删除时候传递的是数组。 名字为 arr
+
+会员收藏的数组为。 vip_arr
+    职位信息为  position
+    地址信息为 location
+    性别        sex
+    学历        education
+    年限        year
+    时间        time
+  -->

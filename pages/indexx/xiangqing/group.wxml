@@ -1,0 +1,32 @@
+  <view class='header'>
+        <image src='/images/timg.jpg'></image>
+    <view class='grup_info'>
+    <view>{{info.name}}</view>
+    <view>{{info.id}}</view>
+    </view>
+  </view>
+  <view class='line_box'>
+  <view class='line'><image src='/images/cp_jj.jpg'></image>附近的群</view>
+  </view>
+  <view class='line_box' style='border-top:2rpx solid #eee;'>
+  <view class='line'><image src='/images/cp_jj.jpg'></image>{{info.area}}</view>
+  </view>
+  <line />
+  <lineer  text='群介绍' bord/>
+ <view class='tet_box'>
+     <view class='tet'>本群创建于   <text>{{info.add_time}}</text></view>
+   <view class='tet'>{{info.desc}}</view>
+ </view>
+   <line />
+   <view bindtap='jump' data-id='{{info.id}}' class='tet_box yuan'>
+     <view class='tet'><text>群成员</text>   <view>{{info.member_num}} <image src='/images/dyh.jpg'></image></view></view>
+   
+ </view>
+<view bindtap='jumpa' data-code='{{info.code}}' class='tet_box yuan'>
+     <view class='tet'><text>群二维码</text>   <image src='/images/dyh.jpg'></image></view>
+   
+ </view>
+ <view class='add_box'>
+ <view class='add' wx:if='{{!info.is_join}}' bindtap='join' data-id='{{info.id}}'>申请加群</view>
+  <view class='add' wx:else bindtap='out' data-id='{{info.id}}'>退出群组</view>
+ </view>

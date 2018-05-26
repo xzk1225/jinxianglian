@@ -1,0 +1,81 @@
+<search />
+<!--垂直滚动，这里必须设置高度-->
+
+<view class='box'>
+<view class='header'>
+  <view style='border-right:2rpx solid #eee;' bindtap='chengshi'><text style='{{cheng ? "color:#81bef8;": ""}};'>{{citya}}</text><image src='/images/jiantou.jpg' style='{{cheng ? "transform:rotate(180deg)": ""}};'></image></view>
+
+  <view bindtap='senior' style='{{seniora ? "color:#81bef8;": ""}};'><text>高级筛选</text><image src='/images/jiantou.jpg' style='{{seniora ? "transform:rotate(180deg)": ""}};'></image></view>
+</view>
+<!--城市选择  start  -->
+<view class='scroll_box' wx:if='{{cheng}}'>
+ <scroll-view scroll-y="true" style="height:400rpx;" class='city'>
+    <view wx:for='{{provinces}}' bindtap='qiehuan' class='province' wx:key='index' data-id='{{index}}'>{{item.provinceName}}</view>
+</scroll-view> 
+<scroll-view scroll-y="true" style="height:400rpx;" class='citya'>
+            <view wx:for='{{city}}' bindtap='cityy' data-id='{{index}}' class='province'>{{item.citysName}}</view>
+          </scroll-view> 
+</view>
+
+
+
+<!--城市选择  end  -->
+<!--高级筛选  start  -->
+<view class='scroll_box senior' wx:if='{{seniora}}'>
+<!-- <view  class='senior_text '>类型</view>
+<view class='senior_list_box'>
+    <view class='senior_list'>联谊</view><view class='senior_list'>联谊</view><view class='senior_list'>联谊</view><view class='senior_list'>联谊</view><view class='senior_list'>联谊</view><view class='senior_list'>联谊</view>
+</view> -->
+<form bindsubmit="submit">
+<block wx:for='{{array}}' wx:key='index'>
+
+<radio-group  bindchange='danxuan'  name='{{"leix"+index}}'>
+  
+
+<view  class='senior_text '>{{item.leix}}</view>
+<view class='senior_list_box'>
+    
+    <label class="radio senior_list"  wx:key='' wx:for-item="itemName" wx:for='{{item.list}}'>
+    <radio value="{{index}}" />{{itemName}}
+  </label>
+   
+</view>
+</radio-group>
+
+</block>
+  <view class='but'>
+    <button style='background:#fff;color:black;border:2rpx solid #eee;'>取消</button>
+ <button formType="submit">确定</button>
+  </view>
+  </form>
+</view>
+<!--高级筛选  end  -->
+</view>
+<!--下方是列表。  -->
+<navigator hover-class="none" url='../xiangqing/jijin'>
+    <view class='content'>
+      <view class='content_box'>
+            <image src='/images/link.jpg'></image>
+            <view class='info'>
+                <view  style='font-size:30rpx;color:black;'>这是一个活动名称  </view>
+                  <view style='font-size:30rpx;color:#525252;'>预期收益:7.0%-7.6% </view>
+                    <view style='font-size:30rpx;color:#525252;'>投资期限:24个月</view>
+                      <view style='font-size:30rpx;color:#525252;'>募集金额:10个亿</view>
+                      <view style='font-size:30rpx;color:#525252;'>产品特点：这是产阿萨德</view>
+            </view>
+      </view>
+</view>
+</navigator>
+<line heig='12rpx' />
+
+
+
+
+<!--  white-space
+  normal: 正常无变化(默认处理方式.文本自动处理换行.假如抵达容器边界内容会转到下一行)
+  pre: 保持HTML源代码的空格与换行,等同与pre标签
+  nowrap: 强制文本在一行,除非遇到br换行标签
+  pre-wrap: 同pre属性,但是遇到超出容器范围的时候会自动换行
+  pre-line: 同pre属性,但是遇到连续空格会被看作一个空格
+  inherit: 继承
+-->

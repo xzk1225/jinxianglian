@@ -1,0 +1,36 @@
+
+<!-- // 在这里遍历各种通知的时候 给她加上事件处理就好。 根据事件添加不同的通知数据。 -->
+<!-- 
+<view class='page'>
+
+    <view wx:for='{{list}}' wx:key='index' class='list_li'>
+     <lineer color='#2e94e9' text='{{item.tz}}' />
+      <image wx:if='{{zt}}' class='min_yuan' src='/images/minyuan.png'></image>
+  <text class='zt_txt' style='{{zt ? "color:red;" : "color:#737373;" }}'>{{item.li}}</text>
+    </view> 
+</view> -->
+<form bindsubmit="formSubmit">
+<checkbox-group bindchange="checkboxChange" name="user_id">
+ <label class="list_box" wx:for="{{items}}">
+
+  <view class='list'>
+  
+    <view class='message_box'>
+     <checkbox value="{{item.user_id}}" checked="{{item.checked}}"/>
+      <image src='{{item.avatar}}'></image>
+      <view class='info'>
+          <view class='name'>{{item.nick}}</view>
+          <view class='message'>{{item.job}}</view>
+      </view>
+    </view>
+   
+  </view>
+
+  </label>
+</checkbox-group>
+ 
+
+<button formType="submit">确定</button>
+ </form>
+
+

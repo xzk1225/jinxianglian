@@ -1,0 +1,47 @@
+
+<!--下方是列表。  -->
+<navigator hover-class="none" url='../xiangqing/xiangmu'>
+    <view class='content'>
+      <view class='content_box'>
+            <image src='/images/link.jpg'></image>
+            <view class='info'>
+                <view class='time'  style='font-size:30rpx;color:black;'>这是一个活动名称   <text>2122-55-54</text></view>
+                  <view style='font-size:30rpx;color:#525252;'>项目地址：北京市场要企业</view>
+                    <view style='font-size:30rpx;color:#525252;'>融资金额：￥300万</view>
+                      <view style='font-size:30rpx;color:#525252;'>融资方式：这是融资方式</view>
+                      <view style='font-size:30rpx;color:#525252;'>所属行业：这是一个行业</view>
+                      <view class='zw'>
+          <view class='view'>
+            <view class='viewa'><image src='/images/yan.jpg'></image>333</view>
+            <view class='viewa'><image src='/images/xin.jpg'></image>333</view>
+          </view>
+          </view>
+            </view>
+      </view>
+</view>
+</navigator>
+
+<line heig='10rpx' />
+
+<lineer text='推荐项目' bord />
+
+<navigator hover-class="none" url='../xiangqing/xiangmu'>
+    <view class='content'>
+      <view class='content_box'>
+            <image src='/images/link.jpg'></image>
+            <view class='info'>
+                <view class='time'  style='font-size:30rpx;color:black;'>这是一个活动名称   <text>2122-55-54</text></view>
+                  <view style='font-size:30rpx;color:#525252;'>项目地址：北京市场要企业</view>
+                    <view style='font-size:30rpx;color:#525252;'>融资金额：￥300万</view>
+                      <view style='font-size:30rpx;color:#525252;'>融资方式：这是融资方式</view>
+                      <view style='font-size:30rpx;color:#525252;'>所属行业：这是一个行业</view>
+                      <view class='zw'>
+          <view class='view'>
+            <view class='viewa'><image src='/images/yan.jpg'></image>333</view>
+            <view class='viewa'><image src='/images/xin.jpg'></image>333</view>
+          </view>
+          </view>
+            </view>
+      </view>
+</view>
+</navigator>

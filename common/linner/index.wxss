@@ -1,0 +1,6 @@
+.star{height: 65rpx;display: flex;align-items: center;font-size: 30rpx;justify-content: center;}
+.star>view{display: flex;width: 704rpx;line-height: 65rpx;align-items: center; border-bottom:2rpx solid #ededed;justify-content: space-between;} 
+.star .geng{color: #d3d3d3;}
+.yuan{width: 8rpx;height: 8rpx;margin-right: 10rpx;}
+.jiantou{width: 24rpx;height: 15rpx;color: #2c91ec;}
+.tianjia image{width: 27rpx; height: 27rpx;margin-right: 10rpx;}

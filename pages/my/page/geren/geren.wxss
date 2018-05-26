@@ -1,0 +1,24 @@
+/* pages/my/page/geren/geren.wxss */
+page{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+.contener_list{width: 704rpx;font-size: 30rpx;display: flex;justify-content: space-between;height: 100rpx;align-items: center;border-bottom: 2rpx solid #eee;}
+.contener_list image{width: 36rpx;height: 36rpx;}
+.contener_list view{display: flex;align-items: center;}
+.contener_list .yjt{width: 16rpx;height: 26rpx;margin-left: 25rpx;}
+.left_img{margin-right: 27rpx;}
+.rz text{font-size: 28rpx; color: #378de1;margin-right: 25rpx;}
+.photo{border-radius: 50%;display: block;}
+
+
+
+
+
+
+
+
+
+
+.picker{width: 100%; height: 400rpx; position: fixed;bottom: 100rpx; background: #fff;}
+.picker-closed{height: 30rpx;padding: 20rpx; border-bottom: 1rpx solid #eee;display: flex;justify-content: space-between}
+.picker-view{height: 340rpx;}
+.picker-view picker-view{width: 100%;height: 100%; padding-right: 50rpx; }
+.picker-view picker-view picker-view-column view{font-size:30rpx;display: flex;justify-content: center;align-content: center;}

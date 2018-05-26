@@ -1,0 +1,16 @@
+/* pages/my/page/jianli.wxss */
+
+.header{display: flex;height: 90rpx;border-bottom:2rpx solid #e0e0e0;}
+.header .text{width: 33.33%;display: flex;justify-content: center;align-items: center;font-size: 30rpx;color: #757575;position: relative;}
+.line{position: absolute;bottom: 0;height: 4rpx;width: 100%;background: #2e94e8;left: 0;}
+.conter{display: flex;justify-content: center;padding: 20rpx 0rpx;border-top: 2rpx solid #e0e0e0;}
+.conter:last-child{border-bottom: 2rpx solid #e0e0e0;}
+.dis{display: flex;align-items: center;}
+.jianli{display: flex;width: 704rpx;align-items: center;justify-content: space-between;}
+.jianli image{width: 86rpx; height: 86rpx;}
+.jianli .info{display: flex;flex-direction: column;font-size: 32rpx;margin-left: 20rpx;line-height: 50rpx;}
+
+.ck{background: #2e94e9;color: white;padding: 20rpx 26rpx; font-size: 32rpx;border-radius: 10rpx;}
+.wck{background: #eeeeee;color: #525252;}
+.box_jl{width: 100%;display: flex;justify-content: center;align-items: center;}
+.box_jl .dis{margin-top: 15rpx;}

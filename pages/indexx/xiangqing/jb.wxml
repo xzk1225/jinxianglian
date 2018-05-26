@@ -1,0 +1,8 @@
+<form bindsubmit="formSubmit">
+
+
+<textarea class='text' name='content' placeholder='请输入留言信息' bindinput='blur'></textarea> 
+
+
+<view class='but' bindtap='formSubmit'>提交</view>
+</form>

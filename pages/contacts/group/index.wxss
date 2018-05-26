@@ -1,0 +1,13 @@
+/* pages/contacts/group/index.wxss */
+.group{display: flex;justify-content: center;}
+.list{height: 80rpx;display: flex;justify-content: center; font-size: 32rpx;}
+.list_box{width: 706rpx;align-items: center;display: flex;justify-content: space-between;}
+.list image{width: 38rpx;height: 38rpx;}
+.tongshi{display: flex;align-items: center;}
+/* .add{font-size: 26rpx;color: black;justify-content: center;display: flex;margin-top: 11rpx;} */
+.nav{display: flex;}
+.nav text{width: 33%;display: flex;justify-content: center;align-items: center;font-size: 32rpx;height: 65rpx;color: #555;}
+.nav navigator{width: 33%;display: flex;justify-content: center;align-items: center;font-size: 32rpx;height: 65rpx;color: #555;}
+.content{width: 706rpx;}
+.hright{height: 190rpx;}
+.head{position:fixed;top: 0;width: 100%;}

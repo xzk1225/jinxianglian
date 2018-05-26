@@ -1,0 +1,25 @@
+.friends_box{
+  background: white;
+  padding: 23rpx;
+  display: flex;
+  border-bottom:2rpx solid #f2f2f2;
+}
+.portrait{width: 130rpx;height: 130rpx;}
+.box_right{line-height: 46rpx; color: #525252; margin-left: 20rpx;display: flex;flex-direction:column;font-size: 28rpx; width: 550rpx;}
+.one{display: flex;justify-content: space-between}
+.name_box{justify-content: space-around}
+.sex{display: inline-flex;margin-left: 20rpx;align-items: center;}
+.sex image{width: 31rpx;height: 31rpx;}
+.time{align-content: flex-end;display: inline-flex;}
+.name_box{display: flex; justify-content: space-around}
+.line_box{height: 36rpx;}
+.line{height: 2rpx;background: #f2f2f2;align-items:center;width: 100%;margin-top: 14rpx;} 
+.hao{display: flex;align-items:center;}
+.friends{width: 48rpx;height: 48rpx;margin-right: 7rpx;}
+.location{display: flex;justify-content: space-between;overflow: hidden;text-overflow:ellipsis;
+white-space: nowrap;}
+.locationer{color: #60acef;border:2rpx solid #60acef;padding: 0rpx 4rpx;font-size:24rpx;}
+.fangke_box{display: flex;justify-content: space-between;align-items: center;}
+.fangke_right{padding: 15rpx 12rpx;border: 2rpx solid #7dbcf1;color: #2889e2;margin-top: 10rpx;}
+/*认证  */
+.renz{margin-left: 8rpx;border: 2rpx solid #525252;}

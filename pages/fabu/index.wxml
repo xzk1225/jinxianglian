@@ -1,0 +1,27 @@
+<view class='nav'>
+ <navigator hover-class="none" class='nav_li' url='./dongtai?money={{money}}&price={{price}}'>
+  <image src='/images/zhao.png' class='nav_list'></image><text>动态</text>
+   </navigator>
+
+  <navigator hover-class="none" class='nav_li' url='./zhiwei?money={{money}}&price={{price}}'>
+   <image src='/images/zhiwei.jpg' class='nav_list'></image><text>职位</text>
+   </navigator>
+  <navigator hover-class="none" class='nav_li' url='./jianli?money={{money}}&price={{price}}'>
+ <image src='/images/jianli.jpg' class='nav_list'></image><text>简历</text>
+  </navigator>
+  <navigator hover-class="none" class='nav_li' url='./huodong?money={{money}}&price={{price}}'>
+  <image src='/images/huodong.jpg' class='nav_list'></image><text>活动</text>
+   </navigator>
+   
+  <!-- <view class='nav_li'><image src='/images/xueli.jpg' class='nav_list'></image><text>学习</text></view> -->
+  <navigator hover-class="none" class='nav_li' url='./zijin?money={{money}}&price={{price}}'>
+  <image src='/images/zijin.jpg' class='nav_list'></image><text>资金</text>
+   </navigator>
+    <navigator hover-class="none" class='nav_li' url='./obj?money={{money}}&price={{price}}'>
+  <image src='/images/xiangmu.jpg' class='nav_list'></image><text>项目</text>
+   </navigator>
+    <navigator hover-class="none" class='nav_li' url='./chanpin?money={{money}}&price={{price}}'>
+  <image src='/images/chanpin.jpg' class='nav_list'></image><text>产品</text>
+   </navigator>
+  <!-- <view class='nav_li'><image src='/images/jifen.jpg' class='nav_list'></image><text>积分商城</text></view> -->
+</view> 

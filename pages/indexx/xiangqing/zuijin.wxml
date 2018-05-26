@@ -1,0 +1,19 @@
+<!--  根据不同的参数来调取不同的数据显示。  -->
+<block wx:for='{{list}}' wx:key='index'>
+
+<!-- <star  info='{{item}}' hy='item.user_id' bind:add='add'  /> -->
+  <navigator url='/pages/renmai/index?id={{item.user_id}}'>
+          <view class='list'>
+    <view class='message_box'>
+      <image src='{{item.user_avatar}}'></image>
+      <view class='info'>
+          <view class='name'>{{item.user_nick}}</view>
+          <view class='message'>{{item.add_time}}</view>
+      </view>
+    </view>
+    </view>
+  </navigator>
+</block>
+
+<!-- <star />
+<star /> -->

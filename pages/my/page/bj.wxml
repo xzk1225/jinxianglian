@@ -1,0 +1,68 @@
+<view class='page'>
+<!--信息编辑 start  -->
+    <view class='header'>
+        <image bindtap='img' src='{{info.avatar}}'></image>
+        <form bindsubmit='submit'>
+        <view class='info'>
+           <view class='one'><input disabled='{{disabled}}' style='font-size:30rpx;font-weight: 800;' class='name' value='{{info.user_nick}}'></input><navigator hover-class="none" url='./geren/geren'  class='bian' ><image src='/images/bj_bj.jpg'></image> 编辑</navigator></view>
+           <view><input class='name' disabled='{{disabled}}' value='{{info.job}}'></input></view>
+           <view class='di'><text>所在地：</text>{{info.province}}{{info.city}}{{info.district}}</view>
+           <view class='di'><text>家乡：</text><view>{{info.home_province}}{{info.home_city}}{{info.home_district}}</view></view>
+        </view>
+        </form>
+    </view>
+<!--信息编辑 end  -->
+<!--我的好友 start  -->
+<!-- <view class='friends_box'>
+    <view class='friends'><text style='color:#2a2a2a;'>我的好友</text><view>去加好友 <image src='/images/yjt.jpg'></image></view></view>
+   
+</view> -->
+<!--我的好友 end  -->
+</view>
+ <line heig='25rpx' bgColor='#f5f5f5' />
+ <!--工作经历 start  -->
+ <lineer id='gzjl' yuan text='工作经历' bindtap='tjs' tj tjurl='../../fabu/add/gongzuo'/>
+ <black wx:for='{{workList}}'>
+      <view class='gzjl_box'>
+     <view class='gzjl'>
+     
+          <image class='photo' src='/images/link.jpg'></image>
+          <view class='info'>
+              <view class='one'><input disabled='{{disabled}}' style='font-size:30rpx;font-weight: 700;' class='name' value='{{item.name}}'></input></view>
+           <view><input class='name' disabled='{{disabled}}' value='{{item.job}}'></input></view>
+           <view><input class='name' disabled='{{disabled}}' value='{{item.desc}}'></input></view>
+           </view>
+           <view class='bian' bindtap='dele' data-id='{{item.id}}'><image src='/images/bj_bj.jpg'></image> 删除        </view>
+     </view> 
+  </view>
+  
+ </black>
+  
+  
+<!--工作经历 end  -->
+<!--教育经历 start  -->
+ <lineer id='gzjl' yuan text='教育经历' tj tjurl='../../fabu/add/jiaoyu'/>
+ 
+  <view class='gzjl_box'>
+     <view class='gzjl' wx:for='{{eduList}}'>
+     
+          <image class='photo' src='/images/link.jpg'></image>
+          <view class='info'>
+              <view class='one'><input disabled='{{disabled}}' style='font-size:30rpx;font-weight: 700;' class='name' value='{{item.name}}'></input></view>
+           <view><input class='name' disabled='{{disabled}}' value='{{item.job}}'></input></view>
+           </view>
+           <view class='bian' bindtap='dele' data-name='jy' data-id='{{item.id}}'><image src='/images/bj_bj.jpg'></image> 删除        </view>
+     </view> 
+  </view>
+<!--教育经历 end  -->
+<!--标签 start  -->
+  <lineer id='gzjl' yuan text='标签' tj tjurl='/pages/fabu/add/tianjia'/>
+  <view class='biaoq_box'>
+      <view class='biaoq'>
+        <view>{{tags}}</view>
+
+    
+
+  </view> 
+  </view>
+<!--标签 end  -->

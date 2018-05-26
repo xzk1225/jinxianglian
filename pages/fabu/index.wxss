@@ -1,0 +1,8 @@
+/* pages/fabu/index.wxss */
+.nav{display: flex;flex-wrap: wrap;padding-bottom: 22rpx;width: 100%;}
+.nav_li{display: flex;flex-direction: column;width: 25%;align-items: center;margin-top: 12rpx;}
+.nav_li text{margin-top: 15rpx;font-size: 28rpx;color: #4c4c4c;}
+.nav image{
+  width: 100rpx;
+  height: 100rpx; 
+}

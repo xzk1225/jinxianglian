@@ -1,0 +1,12 @@
+<!--  根据不同的参数来调取不同的数据显示。  -->
+<block wx:for='{{list}}' wx:key='index'>
+
+<!-- <star  info='{{item}}' hy='item.user_id' bind:add='add'  /> -->
+  <navigator url='/pages/renmai/index?id={{item.user_id}}'>
+       <star me='0' distance='{{distance}}' hy='{{item.user_id}}' info='{{item}}'  bind:add='add'/> 
+        <!-- <star me='0' distance='{{distance}}'  info='{{item}}'  bind:add='add'/> -->
+  </navigator>
+</block>
+ 
+<!-- <star />
+<star /> -->

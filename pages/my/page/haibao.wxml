@@ -1,0 +1,2 @@
+<!--pages/my/page/haibao.wxml-->
+<image src='{{str}}'></image>

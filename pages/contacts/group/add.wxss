@@ -1,0 +1,17 @@
+page{
+background:"#eeeeee";
+height:100%;
+}
+.add{display: flex;justify-content: center;flex-direction: column;align-items: center;margin-top: 60rpx;}
+.add_box{width: 660rpx;display: flex;line-height: 80rpx;align-items: center;background: #fff;border: 2rpx solid #eeeced;margin-bottom: 30rpx;position: relative;}
+.add_box text{flex: 30%;display: flex;justify-content: center;font-size: 32rpx;color: black;}
+.add_box input{flex: 70%;align-content: center;font-size:32rpx;} 
+.add_box view{flex: 70%;align-content: center;font-size:32rpx;height: 80rpx;} 
+.lx{position: absolute;right: 0;top: 0;z-index: -1;}
+.modle{position: fixed;top: 0;left: 0;background: rgba(0, 0, 0, 0.3);height: 100%;width: 100%;z-index: 1}
+.lx_fl{position: fixed;bottom: 0;z-index: 3;background: white;width: 100%;display: flex;flex-direction: column;}
+.fl_list{width: 100%;display: flex;justify-content: center;}
+.shenhe text{justify-content:space-between;}
+.but view{ justify-content: center;display: flex;}
+.but navigator{width: 100%;height: 100%;}
+.but button{font-size: 32rpx;}

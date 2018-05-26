@@ -1,0 +1,5 @@
+/* pages/my/page/message.wxss */
+page{display: flex;justify-content: center;align-items: center;}
+
+.text{width:680rpx;height: 230rpx;border: 2rpx solid #ccc;border-radius: 10rpx;padding-left: 20rpx;margin-top: 40rpx;font-size: 30rpx;}
+.but{width: 704rpx;height: 90rpx;background: #58b2ff;color: white;margin-top: 73rpx;border-radius: 10rpx;display: flex;justify-content: center;align-items: center;}

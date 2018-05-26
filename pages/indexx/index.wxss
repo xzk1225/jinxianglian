@@ -1,0 +1,65 @@
+/* pages/indexx/index.wxss */
+navigator{-webkit-tap-highlight-color:transparent}
+.example {
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  color:white;
+  background: #765534;
+}
+.marquee_box {
+  width: 100%;
+  position: relative;
+}
+.marquee_text {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+}
+.slide-image{width: 100%;height: 100%;}
+.nav{display: flex;flex-wrap: wrap;justify-content: space-between;padding-bottom: 22rpx;}
+.nav_li{display: flex;flex-direction: column;flex: 25%;align-items: center;margin-top: 12rpx;}
+.nav_li text{margin-top: 15rpx;font-size: 28rpx;color: #4c4c4c;}
+.nav image{
+  width: 100rpx;
+  height: 100rpx; 
+}
+/*group  群组  */
+.group{display: flex;}
+.group_list{display: flex;flex-direction: column;font-size: 22rpx;align-items: center;margin-top: 25rpx;}
+.group_list text{margin-top: 10rpx;}
+.group_list image{width: 125rpx;height: 125rpx;border-radius: 50%;}
+.index_line{height: 20rpx;background: #eeeeee;}
+/*浅灰色线  */
+.star{height: 65rpx;display: flex;align-items: center;font-size: 30rpx;color: #2c2c2c;justify-content: center;}
+.star view{display: flex;width: 704rpx;line-height: 65rpx;justify-content: space-between;border-bottom:2rpx solid #ededed;} 
+.star .geng{color: #d3d3d3;}
+.friends_box{
+  background: white;
+  padding: 23rpx;
+  display: flex;
+  border-bottom:2rpx solid #f2f2f2;
+}
+.portrait{width: 130rpx;height: 130rpx;}
+.box_right{line-height: 46rpx; color: #525252; margin-left: 20rpx;display: flex;flex-direction:column;font-size: 28rpx; width: 550rpx;}
+.one{display: flex;justify-content: space-between}
+.name_box{justify-content: space-around}
+.sex{display: inline-flex;margin-left: 20rpx;align-items: center;}
+.sex image{width: 31rpx;height: 31rpx;}
+.time{align-content: flex-end;display: inline-flex;}
+.name_box{display: flex; justify-content: space-around}
+.line_box{height: 36rpx;}
+.line{height: 2rpx;background: #f2f2f2;align-items:center;width: 100%;margin-top: 14rpx;} 
+.hao{display: flex;align-items:center;}
+.friends{width: 48rpx;height: 48rpx;margin-right: 7rpx;}
+.location{display: flex;justify-content: space-between;}
+.locationer{color: #60acef;border:2rpx solid #60acef;padding: 0rpx 4rpx;font-size:24rpx;}
+.tip{font-size: 30rpx;display: flex;justify-content: center;background: white;height: 117rpx;align-items: center;}
+.tip_box{width: 704rpx;align-items: center;display: flex;}
+.tip image{width: 78rpx;height: 78rpx;}
+.tip text{margin-left: 20rpx;}
+button{border: none;background: #fff;margin: 0;padding: 0;display: 	inline;}

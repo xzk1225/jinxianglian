@@ -1,0 +1,6 @@
+/* pages/contacts/tz/xq.wxss */
+page{display: flex;flex-direction: column;color: #555;justify-content: center;align-items: center;}
+view{display: flex;width: 704rpx;}
+.title{font-size: 32rpx;}
+.time{font-size: 24rpx;color: #ccc;}
+.content{font-size: 30rpx;}

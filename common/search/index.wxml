@@ -1,0 +1,42 @@
+<view class='header_box'>
+  <view class='header'>
+<input id='{{id}}' data-url='{{url}}'  confirm-type='{{typee}}' bindconfirm='_confirm' bindinput='_input'></input><image src='/images/search.jpg'></image>
+</view>
+ <!-- <view class='list_box' wx:if='{{qun}}'>
+  <view wx:key='index' wx:for='{{list}}' class='list_li'>
+    <image src='{{img_url}}'></image>
+    <view class='info'>
+        <view>{{item.name}}</view>
+        <view class='position'>{{item.position}}</view>
+    </view>
+   </view>
+</view> -->
+<!-- <block wx:else>
+     <view class='navig'   >
+      <navigator wx:key='index' wx:for='{{list}}' url='/'>
+          <view class='list'>
+      <view class='list_boxx'>
+        <view class='tongshi'>
+          <image src='/images/xiaoyou.jpg'></image>
+          <text style='margin-left:30rpx;'>{{item.name}}</text>
+        </view>
+      </view>
+      </view>
+      </navigator>
+     </view>
+</block> -->
+
+</view>
+
+<!--主要入口
+  search 的 搜索请求地址为   url
+  好友联系的头像地址为  img_url
+  好友名字为  name
+  好友的职位为position
+
+
+
+
+
+
+  -->

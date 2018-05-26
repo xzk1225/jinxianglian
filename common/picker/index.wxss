@@ -1,0 +1,7 @@
+/* common/picker/index.wxss */
+
+.picker{width: 100%; height: 400rpx; position: fixed;bottom: 00rpx; background: #fff;z-index: 55;}
+.picker-closed{height: 30rpx;padding: 20rpx; border-bottom: 1rpx solid #eee;display: flex;justify-content: space-between}
+.picker-view{height: 340rpx;}
+.picker-view picker-view{width: 100%;height: 100%; padding-right: 50rpx; }
+.picker-view picker-view picker-view-column view{font-size:30rpx;display: flex;justify-content: center;align-content: center;}

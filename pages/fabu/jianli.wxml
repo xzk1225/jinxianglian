@@ -1,0 +1,160 @@
+<form bindsubmit="formSubmit" report-submit='true'>
+<view class='page'>
+<!-- <view class='page_box'>
+  <view class='page_list jz'>
+      <text>期望薪资</text> <view><input name='wage' placeholder='请输入期望薪资' right></input></view>
+  </view>
+</view> -->
+
+<view class='page_box' data-id='wage' data-arr='wagearr' bindtap='leixing'>
+  <view class='page_list'>
+      <text>期望薪资</text> <view><text wx:if='{{wage>-1}}'>{{wagearr[wage]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+
+
+
+
+<picker class='page_box' bindchange="industry" value="{{industry}}" range="{{lxarr}}">
+  <view class='page_list'>
+      <text>行业/类别</text> <view><text wx:if='{{industry>-1}}'>{{lxarr[industry]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+  </picker>
+
+
+
+
+
+<view class='page_box' data-id='work_year' data-arr='jyarr' bindtap='leixing'>
+  <view class='page_list'>
+      <text>工作年限</text> <view><text wx:if='{{work_year>-1}}'>{{jyarr[work_year]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+
+<view class='page_box' data-id='edu' data-arr='eduarr' bindtap='leixing'>
+  <view class='page_list'>
+      <text>学历</text> <view><text wx:if='{{edu>-1}}'>{{eduarr[edu]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+
+<view class='page_box no'>
+  <view class='page_list jz'>
+      <view><image class='yuan' src='/images/yuan.jpg'></image> 工作经历</view> 
+      <navigator url='./add/gongzuo'><view class='tianjia'><image class='tj' src='/images/bj_tj.jpg'></image>添加</view></navigator>
+  </view>
+   <view class='jingli_box' wx:for='{{workList}}' wx:key='index'>
+      <image src='/images/link.jpg'></image>
+      <view class='jingli'>
+        <text>{{item.name}}</text>
+        <text style='color:#a4a4a4;'>{{item.start_time}}-{{item.end_time}}   {{item.job}}</text>
+        <text>{{item.desc}}</text>
+      </view>
+  </view>
+</view>
+<line />
+<view class='page_box no'>
+  <view class='page_list jz'>
+      <view><image class='yuan' src='/images/yuan.jpg'></image> 教育经历</view>
+       <navigator url='./add/jiaoyu'><view class='tianjia'><image class='tj' src='/images/bj_tj.jpg'></image>添加</view></navigator>
+  </view>
+   <view class='jingli_box' wx:for='{{eduList}}' wx:key='index'>
+      <image src='/images/link.jpg'></image>
+      <view class='jingli'>
+        <text>{{item.name}}</text>
+        <text style='color:#a4a4a4;'>{{item.start_time}}-{{item.end_time}}   {{item.job}}   {{eduarr[item.edu]}}</text>
+        <text>{{item.desc}}</text>
+      </view>
+  </view>
+  <!-- <view class='jingli_box'>
+      <image src='/images/link.jpg'></image>
+      <view class='jingli'>
+        <text>北京l联合大学</text>
+        <text style='color:#a4a4a4;'>2022.01-2015.01   计算机   专科</text>
+        <text>好好学习天天向上</text>
+      </view>
+  </view> -->
+</view>
+<line />
+
+<view class='page_box no'>
+  <view class='page_list jz'>
+      <view><image class='yuan' src='/images/yuan.jpg'></image>擅长领域</view> 
+      <view class='tianjia'><navigator url='./add/tianjia'><image class='tj' src='/images/bj_bj.jpg'></image>编辑</navigator></view>
+  </view>
+   <view class='jingli_box bj'>
+ 
+      <text>{{tags}}</text>
+      
+  </view>
+</view>
+
+
+
+<view class='page_box no'>
+
+<view class='page_box no'>
+  <view class='page_list' >
+      
+      <view style='display:flex;'>
+      <text>推荐</text> 
+        <radio-group class="radio-group" bindchange='chang'>
+  <label class="radio" >
+    <radio value="0" />否
+  </label>
+  <label class="radio" >
+    <radio value="1" />是
+  </label>
+</radio-group>
+      
+      </view>
+  </view>
+  </view>
+  
+  
+</view>
+
+<block wx:if='{{val}}'>
+<view bindtap="bindRegionChange" >
+   <view class='page_box no'>
+  <view class='page_list border' style='align-items: center;'>
+     <text> {{region[0]}}-{{region[1]}}-{{region[2]}}</text><image class='san' src='/images/sanjiao.jpg'></image>
+  </view>
+</view>
+  </view>
+<!--推荐的天数  -->
+  <picker bindchange="bindPickerChange" value="{{index+1}}" range="{{tianshu}}">
+  <view class='page_box no'>
+  <view class='page_list border' style='align-items: center;'>
+     <text wx:if='{{week}}'>{{tianshu[week]}}</text><text wx:else>周数</text><image class='san' src='/images/sanjiao.jpg'></image>
+  </view>
+</view>
+   
+  </picker>
+
+<view class='page_box no'>
+  <view class='jifen'>
+<text>我的积分：{{money}}</text>
+<text>需要积分：{{integral}}</text>
+</view>
+</view>
+</block>
+<view class='page_box no'>
+  <view class='jifen but'>
+<button class='text' formType="submit"  style='background:#47adea;color:white;'>立即发布</button>
+
+</view>
+</view>
+
+</view>
+
+
+
+</form>
+
+
+
+<city id='city' bind:confirmEvent='_confirmEvent' bind:cancelEvent='_cancelEvent'/>
+

@@ -1,0 +1,138 @@
+<form bindsubmit="formSubmit" report-submit='true'>
+<view class='page'>
+
+<picker class='page_box' bindchange="industry" value="{{industry}}" range="{{lxarr}}">
+  <view class='page_list'>
+      <text>行业/类别</text> <view><text wx:if='{{industry>-1}}'>{{lxarr[industry]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+  </picker>
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>招聘职位</text> <view><input name='job' value='{{info.job}}' placeholder='请输入招聘职位' right></input></view>
+  </view>
+</view>
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>技能要求</text> <view><input name='skill' value='{{info.skill}}' placeholder='请输入技能要求' right></input></view>
+  </view>
+</view>
+
+<view class='page_box' data-id='edu' data-arr='xlarr' bindtap='leixing'>
+  <view class='page_list'>
+      <text>学历要求</text> <view><text wx:if='{{edu>-1}}' name='{{edu}}'>{{xlarr[edu]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+<view class='page_box' data-id='work_year' data-arr='jyarr' bindtap='leixing'>
+  <view class='page_list'>
+      <text>工作经验</text> <view><text wx:if='{{work_year>-1}}' name='{{work_year}}'>{{jyarr[work_year]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+<view class='page_box' data-id='wage' data-arr='xcarr' bindtap='leixing'>
+  <view class='page_list jz'>
+      <!-- <text>薪酬范围</text> <view><input placeholder='请输入薪酬范围' right></input></view> -->
+      <text>薪酬范围</text> <view>
+      <text wx:if='{{wage>-1}}'>{{xcarr[wage]}}</text><text wx:else>必选</text>
+      <image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>详细地址</text> <view><input name='addr' value='{{info.addr}}' placeholder='请输入地址' right></input></view>
+  </view>
+</view>
+
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>招聘邮箱</text> <view><input name='email' value='{{info.email}}' placeholder='请输入邮箱' right></input></view>
+  </view>
+</view>
+
+<view class='page_box no'>
+  <view class='page_list' style='flex-direction: column;'>
+      <text>职位描述</text> 
+      <textarea class='txt' name='describe' value='{{info.describe}}' placeholder='请输入岗位职责、任职要求等'></textarea>
+  </view>
+<view class='page_box no'>
+  <view class='page_list' style='flex-direction: column;'>
+      <text>职位亮点</text> 
+      <view>
+      <!--  职位亮点。  -->
+        <checkbox-group bindchange="checkboxChange" > 
+          <label wx:key='index' class="checkbox" style='{{item.check? "color:#4854f2":""}}' wx:for='{{liangdian}}'>
+            <checkbox value="{{index}}" checked='{{item.check}}'/>{{item.cont}}
+          </label>
+         
+        </checkbox-group>
+      
+      </view>
+  </view>
+  </view>
+
+<view class='page_box no'>
+  <view class='page_list' >
+      <!--是否推荐  -->
+      <view style='display:flex;'>
+      <text>推荐</text> 
+        <radio-group class="radio-group" bindchange='chang'>
+  <label class="radio" >
+    <radio value="0" checked='true'/>否
+  </label>
+  <label class="radio" >
+    <radio value="1" />是
+  </label>
+</radio-group>
+      
+      </view>
+  </view>
+  </view>
+  
+  
+</view>
+<!--推荐的地区  -->
+<block wx:if='{{val}}'>
+<view bindtap="bindRegionChange" >
+   <view class='page_box no'>
+  <view class='page_list border' style='align-items: center;'>
+     <text> {{region[0]}}-{{region[1]}}-{{region[2]}}</text><image class='san' src='/images/sanjiao.jpg'></image>
+  </view>
+</view>
+  </view>
+<!--推荐的天数  -->
+  <picker bindchange="bindPickerChange" value="{{index+1}}" range="{{tianshu}}">
+  <view class='page_box no'>
+  <view class='page_list border' style='align-items: center;'>
+     <text wx:if='{{week}}'>{{tianshu[week]}}</text><text wx:else>周数</text><image class='san' src='/images/sanjiao.jpg'></image>
+  </view>
+</view>
+   
+  </picker>
+
+<view class='page_box no'>
+  <view class='jifen'>
+<text>我的积分：{{money}}</text>
+<text>需要积分：{{integral}}</text>
+</view>
+</view>
+</block>
+ 
+<view class='page_box no'>
+  <view class='jifen but'>
+  <button class='text' formType="submit" style='background:#47adea;color:white;'> 保存修改</button>
+  <button class='text' bindtap='del' style='background:#47adea;color:white;'> 删除</button>
+<!-- <text style='background:#47adea;color:white;'>立即发布</text> -->
+
+</view>
+</view>
+
+</view>
+
+
+</form>
+
+
+
+<city id='city' bind:confirmEvent='_confirmEvent' bind:cancelEvent='_cancelEvent'/>
+

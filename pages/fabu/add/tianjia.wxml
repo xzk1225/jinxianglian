@@ -1,0 +1,12 @@
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+<checkbox-group bindchange="checkboxChange" name='tag_ids'>
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.name}}
+  </label>
+</checkbox-group>
+
+
+
+    <button class='but' formType="submit">完成</button>
+
+</form>

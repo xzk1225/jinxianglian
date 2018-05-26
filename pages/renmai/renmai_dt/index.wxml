@@ -1,0 +1,64 @@
+
+<line />
+
+<star me='{{id}}' info='{{info}}' />
+<view class='page' wx:for='{{dt_list}}' wx:key='in'>
+    <!-- <text class='time'>{{item.add_time}} 发布了招聘信息：行政秘书</text> -->
+    <view class='dele'>
+        <text class='time'>{{item.add_time}}</text>
+        <text class='time' bindtap='delete' data-index='{{index}}' data-id='{{item.post_id}}' wx:if='{{id==0}}'>delete</text>
+    </view>
+     
+<view class='info_bx'>
+  <!-- <view class='header'>{{item.}}</view> -->
+  <view class='info'>{{item.content}}</view>
+  <view>
+      <image wx:for='{{item.pic_list}}' wx:key='index' wx:for-item='index' src='{{index}}'></image>
+  </view>
+</view>
+ <view class='xiao_box'> 
+      <view class='xiao_list' bindtap='zan' data-id='{{item.post_id}}'><image src='/images/zan.jpg'></image>{{like_list.length}}</view>
+      <!--评论  start-->
+      <view bindtap='input' data-id='{{item.post_id}}' class='xiao_list'><image src='/images/pinglun.jpg'></image>{{review_list.length}}</view>
+      <!--评论  end>
+
+      <!-- <view class='xiao_list'><image src='/images/fenxiang.jpg'></image>333</view> -->
+</view>
+<!-- <view class='comment'>
+    <view class='txt'><text class='name'>张三</text>  ： <text>这就是地球</text></view>
+<view class='txt'><text class='name'>张三</text>回复<text class='name'>张三</text>： <text>你猜</text></view>
+</view > -->
+<view class='comment' wx:key='index' wx:for='{{item.review_list}}' wx:for-item='key'>
+    <view class='txt' bindtap='reply' data-review_id='{{key.review_id}}' data-parent_reply_id='0'>
+        <view>
+            <text class='name'>{{key.name}}</text>  ： <text>{{key.content}}</text>
+        </view>
+        <image wx:if='{{id==0}}' data-review_id='{{key.review_id}}' class='delete_png' src='/images/address_list_1_icon_del.png' catchtap='delete_reply'></image>
+    </view>
+<view wx:key='index' data-review_id='{{key2.review_id}}' wx:for='{{key.reply_list}}' wx:for-item='key2' data-parent_reply_id='{{key2.parent_reply_id}}' class='txt'>
+    <view><text class='name'>{{key2.send_user_name}}</text>回复<text class='name'>{{key2.reply_user_name}}</text>： <text>{{key2.content}}</text></view>
+    <image class='delete_png' data-review_id='{{key2.review_id}}' wx:if='{{id==0}}' src='/images/address_list_1_icon_del.png' catchtap='delete_reply'></image>
+</view>
+</view >
+
+
+
+
+
+
+</view>
+
+
+<textarea auto-height='true' wx:if='{{display}}' class='textt' data-id='{{pl_id}}'   placeholder='{{place}}' focus='{{display}}' show-confirm-bar='teur'  bindconfirm='confirm' bindblur='blur' data-review_id='{{review_id}}' data-parent_reply_id='{{parent_reply_id}}'></textarea>
+
+
+
+
+
+
+
+
+
+
+
+<navigator wx:if='{{id==0}}' hover-class="none" url='/pages/fabu/dongtai'><image class='fb' src='/images/fabu.jpg'></image></navigator>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "急速找人",
+  "navigationBarBackgroundColor": "#5fcc89",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "star": "/common/details/index",
+    "line": "/common/line/index",
+    "lineer": "/common/linner/index",
+    "search": "/common/search/index",
+    "city": "/common/picker/index"
+  }
+}

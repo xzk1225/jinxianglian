@@ -1,0 +1,53 @@
+/* pages/indexx/xiangqing/zhiwei.wxss */
+
+page{display: flex;justify-content: center;flex-direction: column;align-items: center;padding-bottom: 100rpx;}
+.content{display: flex;justify-content: center;border-bottom: 2rpx solid #eee;}
+.content_box{width: 704rpx;padding: 30rpx 0rpx;display: flex;font-size: 25rpx;line-height: 50rpx;color: #565656;}
+.content_box image{width: 129rpx;height: 129rpx;}
+.info{margin-left: 24rpx;display: flex;flex-direction: column;width: 547rpx;}
+.info_list{display: flex;justify-content: space-between;}
+.salary{display: flex;flex-direction: column;}
+.salary text{justify-content: flex-end;display: flex;}
+.zw{font-size: 30rpx;display: flex;align-items: center;width: 100%;}
+.zw view{width: 33%;display: flex;justify-content: center;align-items: center;height: 71rpx;}
+.zw image{width: 30rpx;height: 30rpx;margin-right: 10rpx;}
+.liangdian{padding: 30rpx;font-size: 30rpx;color: #575757;}
+.sc_box{display: flex;justify-content: center;align-items: center;}
+.sc{display: flex;justify-content: space-between;width: 704rpx;font-size: 30rpx;align-items: center;}
+.sc_list{display: flex;justify-content: center;align-items: center;margin-right: 50rpx;flex-direction: column;}
+.sc image{width: 30rpx;height: 30rpx;}
+.sc_left{display: flex;}
+/* .sc_left>view{display: flex;flex-direction: column;} */
+.sc_right{width: 142rpx;height: 56rpx;background: #2e9ef4;color: white;justify-content: center;display: flex;align-items: center;border-radius: 10rpx;}
+.laifang_bx{display: flex;justify-content: center;padding: 20rpx 0rpx;}
+.laifang{width: 704rpx;height: 74rpx;align-items: center;display: flex;}
+.laifang image{width: 54rpx;height: 54rpx;margin-right: 16rpx;}
+
+
+
+
+/*活动详情页面css  */
+.header_img{height: 263rpx;width: 100%;}
+.name{width: 704rpx;font-size: 28rpx;}
+.xinxi{width: 704rpx;display: flex;font-size: 24rpx;margin: 20rpx 0rpx;}
+.xinxi view{margin-right: 30rpx;}
+.xinxi_box{border-top: 2rpx solid #e4e4e4;line-height: 84rpx;width: 100%;display: flex;justify-content: center;}
+.xinxi_list{width: 704rpx;font-size: 26rpx;}
+.xinxi_list image{width: 27rpx;height: 27rpx;margin-right: 24rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*下方绑定  */
+.bottom{position: fixed;bottom: 0;height: 100rpx;display: flex;width: 100%;border-top: 2rpx solid #eee;}
+.bottom text{width: 30%;background: #2e9ef4;color: #fff;display: flex;justify-content: center;align-items: center;}
+.bottom view{width: 70%;background: white;display: flex;justify-content: center;align-items: center;}

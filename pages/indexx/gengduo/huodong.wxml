@@ -1,0 +1,17 @@
+<block wx:for='{{list}}' wx:key='index'>
+<navigator hover-class="none" url='../xiangqing/huodong?id={{item.id}}&user_id={{item.user_id}}'>
+    <view class='content'>
+      <view class='content_box'>
+            <image src='/images/link.jpg'></image>
+            <view class='info'>
+                <view class='info_list' style='font-size:30rpx;color:black;'>{{item.name}}  <text style='color:#525252;'>{{item.add_time}}</text></view>
+                  <view class='info_list' style='font-size:30rpx;color:#525252;'>活动城市：{{item.city}} <text style='color:#53a7f0;'>￥{{item.fee}}</text></view>
+                    <view style='font-size:30rpx;color:#525252;'>活动地址：{{item.addr}}</view>
+                      <!-- <view style='font-size:30rpx;color:#525252;'>报名时间：{{item.start_time}}~{{item.end_time}}</view> -->
+                      <view style='font-size:30rpx;color:#525252;'>活动时间：{{item.start_time}}~{{item.end_time}}</view>
+            </view>
+      </view>
+</view>
+</navigator>
+<line heig='12rpx' />
+</block>

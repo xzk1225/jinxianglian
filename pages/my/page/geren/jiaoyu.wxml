@@ -1,0 +1,36 @@
+<view class='header'>
+  <text>我的教育经历</text>
+</view>
+<view class='content'>
+<view class='content_list'>
+<text>学校</text>
+<view><input placeholder='请输入学校名称'></input></view>
+</view>
+</view>
+<view class='content'>
+<view class='content_list'>
+<text>专业</text>
+<view><input placeholder='请输入专业名称'></input></view>
+</view>
+</view>
+<picker class='content' mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+   
+<view class='content_list'>
+<text>开始时间</text>
+<view> {{date}}<image src='/images/yjt.jpg'></image></view>
+</view>
+  </picker>
+
+<picker class='content' mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+<view class='content_list'>
+<text>结束时间</text>
+<view> {{date}}<image src='/images/yjt.jpg'></image></view>
+</view>
+  </picker>   
+<view class='header'>
+  <text>经历描述</text>
+</view>
+<view class='content'>
+<textarea placeholder='请填写在校期间参与的活动和获得的荣誉'></textarea>
+</view>
+<button>保存</button>

@@ -1,0 +1,17 @@
+<block wx:for='{{list}}' wx:key='index'>
+<navigator hover-class="none" url='../xiangqing/xiangmu?id={{item.id}}&user_id={{item.user_id}}'>
+    <view class='content'>
+      <view class='content_box'>
+            <image src='/images/link.jpg'></image>
+            <view class='info'>
+                <view  style='font-size:30rpx;color:black;'>{{item.name}}  </view>
+                  <view style='font-size:30rpx;color:#525252;'>融资金额：￥<text style='color:#3194e5;'>{{item.amount}}</text> </view>
+                    <view style='font-size:30rpx;color:#525252;'>所在地区：{{item.province}},{{item.city}},{{item.district}}</view>
+                      <view style='font-size:30rpx;color:#525252;'>所属行业：{{industryarr[item.industry]}}</view>
+                      <view style='font-size:30rpx;color:#525252;'>融资方式：{{wayarr[item.way]}}</view>
+            </view>
+      </view>
+</view>
+</navigator>
+<line heig='12rpx' />
+</block>

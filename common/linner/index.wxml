@@ -1,0 +1,18 @@
+  <view class='star' style='backgrund:#fff;'>
+    <view style='{{bord? "border:none;" : ""}}'>
+      <view style='display:flex;align-items:center;'><image wx:if='{{yuan}}' class='yuan' src='/images/yuan.jpg'></image>
+      <text style='color:{{color}};font-size:{{fontSize}};'>{{text}}</text></view> 
+      <navigator hover-class="none" url="{{url}}" wx:if='{{url.length>1}}' class='geng'>更多  ></navigator>
+      <image wx:if='{{jiantou}}' class='jiantou' style='{{ deg ? "transform:rotate(180deg)" : " "}}' src='/images/jiantou.jpg'></image> 
+      <navigator url='{{tjurl}}' wx:if='{{tj}}' bindtap='tjs' class='tianjia'><image src='/images/bj_tj.jpg'></image>添加</navigator>
+    </view>
+  </view>
+
+  <!--有没有园点   圆 默认是没有点 只要加上就好
+  添加的地址    tjurl
+  文本信息颜色  color
+  text 文本信息  text=\\\
+  跳转的页面  url 默认是没有的。 需要长度大于1时候出现更多。
+  箭头 默认是没有的。 需要添加箭头属性。
+  取消下边框为      bord
+    -->

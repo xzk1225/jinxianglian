@@ -1,0 +1,18 @@
+/* pages/indexx/xiangqing/zijin.wxss */
+page{
+  display: flex;justify-content: center;align-items: center;flex-direction: column;
+}
+.header{display: flex;justify-content: center;}
+.content_box{width: 704rpx;padding-top: 30rpx;display: flex;font-size: 25rpx;line-height: 50rpx;color: #b9b9b9;}
+.content_box image{width: 129rpx;height: 129rpx;}
+.info{margin-left: 24rpx;display: flex;flex-direction: column;width: 547rpx;}
+.info_list{display: flex;justify-content: space-between;align-items: center;}
+.info_list text{font-size: 20rpx;color: #8e8e8e;}
+.zw{font-size: 30rpx;display: flex;align-items: center;width: 100%;justify-content: center;border-top: 2rpx solid #eee;margin-top: 20rpx;}
+.zw .view{display: flex;justify-content: flex-end;align-items: center;height: 71rpx;width: 704rpx;}
+
+.zw .viewa{display: flex;justify-content: center;align-items: center;height: 71rpx;margin-left: 80rpx;}
+.zw image{width: 30rpx;height: 30rpx;margin-right: 10rpx;}
+.asd{width: 100%;}
+
+

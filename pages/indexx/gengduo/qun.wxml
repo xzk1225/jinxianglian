@@ -1,0 +1,15 @@
+<navigator  hover-class="none" url='../xiangqing/group'>
+<view class='content group'>
+    <view class='group_list'>
+      <view class='list_left'>
+          <image class='photo' src='/images/link.jpg'></image>
+          <view>
+              <text>激情娱乐</text>
+              <view class='xiao_bg' ><image class='xiao' src='/images/cp_jj.jpg'></image>2</view>
+              <view style='font-size:24rpx;color:#696969;'>想几千嘛?那就一起来吧</view>
+          </view>
+      </view>
+      <view class='list_right'>北京市朝阳区</view>
+    </view>
+</view>
+</navigator>

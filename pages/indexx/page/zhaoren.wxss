@@ -1,0 +1,10 @@
+/* pages/indexx/page/zhaoren.wxss */
+.search_box{height: 280rpx;position: relative;justify-content: center;align-items: center;display: flex;font-size: 30rpx;}
+.search_box image{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
+.search{width: 706rpx;height: 91rpx;z-index: 2;display: flex;border: 2rpx solid white;justify-content: space-between;align-items: center;background: white;border-radius: 10rpx;}
+.search input{padding-left: 25rpx;}
+.search text{background: #5fcc89;height: 87rpx;width: 146rpx;display: flex;justify-content: center;align-items: center;color: white;border-top-right-radius: 10rpx;border-bottom-right-radius: 10rpx;}
+.zhao_header{display: flex;align-items: center;border-top:2rpx solid #eeeeee;border-bottom:2rpx solid #eeeeee; }
+.zhao_header .shu{height: 70rpx;background: #76aae6;width: 8rpx;margin-right: 16rpx;}
+.zhao_content{display: flex;flex-wrap: wrap;}
+.zhao_content text{width: 33.33%;font-size: 30rpx;line-height: 70rpx;justify-content: center;align-items: center;display: flex;}

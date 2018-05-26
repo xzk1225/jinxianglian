@@ -1,0 +1,8 @@
+/* pages/my/page/geren/tianjia.wxss */
+page{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+input{width: 704rpx;font-size: 30rpx;margin-top: 20rpx;margin-bottom: 30rpx;height:82rpx;}
+.but{background: #349df8;color: #fff;height: 90rpx;width: 704rpx;display: flex;justify-content: center;align-items: center;}
+.box{width: 700rpx;display: flex;border-top:2rpx solid #eee; height: 120rpx;align-items: center;}
+.box input{width: 70%;margin: 0;}
+.box form{width: 30%;}
+.box button{font-size: 30rpx;display: flex;align-items: center;padding: 0; margin:0; justify-content: center;}

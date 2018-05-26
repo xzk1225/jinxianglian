@@ -1,0 +1,7 @@
+.content{display: flex;justify-content: center;}
+.content_box{width: 704rpx;padding: 30rpx 0rpx;display: flex;font-size: 25rpx;line-height: 50rpx;color: #b9b9b9;}
+.content_box image{width: 129rpx;height: 129rpx;}
+.info{margin-left: 24rpx;width: 392rpx;}
+.salary{display: flex;flex-direction: column;}
+.salary text{justify-content: flex-end;display: flex;}
+

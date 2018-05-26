@@ -1,0 +1,30 @@
+/* pages/indexx/page/zhiwei.wxss */
+.header{display: flex;font-size: 30rpx;height: 95rpx;align-items: center;justify-content: center;border-bottom: 2rpx solid #eee;}
+.header image{width: 24rpx;height: 15rpx;margin-left: 10rpx;}
+.header>view{width: 48%;display: flex;justify-content: center;align-items: center;height: 50rpx;}
+.box{position: relative;}
+.scroll_box{background: #fff; display: flex;justify-content: center;position: absolute;top: 95rpx;width: 100%;}
+.city{width: 50%;height: 400rpx;font-size: 30rpx;}
+.province{line-height: 50rpx;text-align: center;}
+
+.citya{width: 50%;font-size: 30rpx;}
+
+.content{display: flex;justify-content: center;}
+.content_box{width: 704rpx;padding: 30rpx 0rpx 0rpx 0rpx;display: flex;font-size: 25rpx;line-height: 50rpx;color: #b9b9b9;}
+.content_box image{width: 129rpx;height: 129rpx;}
+.info{margin-left: 24rpx;display: flex;flex-direction: column;width: 547rpx;}
+.info_list{display: flex;justify-content: space-between;}
+.salary{display: flex;flex-direction: column;}
+.salary text{justify-content: flex-end;display: flex;}
+/*高级筛选  */
+.senior{flex-direction: column;justify-content: center;align-items: center;font-size: 30rpx;}
+.senior_text{width: 704rpx;height: 35rpx;line-height: 35rpx;}
+
+.senior_list_box{width: 704rpx;display: flex;justify-content: space-between;flex-wrap: wrap;margin-bottom: 30rpx;}
+.senior_list{height: 57rpx;width: 207rpx;border: 2rpx solid #e8e8e8;display: flex;justify-content: center;align-items: center;margin-top: 20rpx;border-radius: 10rpx;}
+.zw .view{display: flex;justify-content: flex-end;align-items: center;height: 71rpx;border-top: 2rpx solid #eee;margin-top: 8rpx;}
+
+.zw .viewa{display: flex;justify-content: center;align-items: center;height: 71rpx;margin-left: 80rpx;}
+.zw image{width: 30rpx;height: 30rpx;margin-right: 10rpx;}
+.time{display: flex;justify-content: space-between;}
+.time text{color: #808080;font-size: 24rpx;}

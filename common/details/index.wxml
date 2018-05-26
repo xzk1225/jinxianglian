@@ -1,0 +1,54 @@
+
+<view class='friends_box'>
+    <view class='box_left'>
+    <image class='portrait' wx:if='{{info.avatar}}' src='{{info.avatar}}'></image>
+    <image class='portrait' wx:else src='/images/link.jpg'></image>
+    </view>
+    <view class='box_right'>
+      <view class='one'>
+        <view class='name_box'>
+          <view style='color:black;'>{{info.nick}}</view> 
+            <view wx:if="{{info.sex==1}}" class='sex'><image src='/images/man.jpg'></image></view>
+            <view class='sex'  wx:elif='{{info.sex==2}}'><image src='/images/wuman.jpg'></image></view>
+            <view class='sex' wx:else>保密</view>
+            <block wx:if='{{distance}}'><text class='renz' wx:if='{{info.cert==1}}'>已认证</text><text wx:else class='renz'>未认证</text></block>
+        </view>
+        <!-- <text class='time'>{{time}}</text> -->
+      </view>
+      <view class='location'><text>{{info.company}} | {{info.job}}</text><block wx:if='{{distance}}'><text class='locationer'>距{{info.distance}}km</text></block></view>
+      <view class='fangke_box'>
+        <view class='fangke_left'>
+          <view>所在地区:{{info.province}}-{{info.city}}-{{info.district}}</view>
+      <!-- <view>家乡: {{info.home_province}}-{{info.home_city}}-{{info.home_district}}</view> -->
+        </view>
+        <block wx:if='{{hy}}'>
+          <block wx:if='{{info.friend}}'>
+         <view catchtap='_add' data-hy='{{hy}}' class='fangke_right'>删除好友</view>
+        </block>
+        <block wx:else>
+          <!-- <view catchtap='_add' data-hy='{{hy}}' class='fangke_right'>+好友</view> -->
+        </block>
+        </block>
+      </view>
+      <block wx:if='{{!me}}'>
+       <view class='line_box'><view class='line'></view></view>
+       
+          <block wx:if='{{info.friend}}'>
+         <view>手机：{{info.phone}}</view>
+         <view>邮箱：{{info.mail}}</view>
+        </block>
+        <block wx:else>
+          <view >联系方式：<text>请先添加好友</text></view>
+        </block>
+      <view class='line_box'><view class='line'></view></view>
+      <view class='hao' ><view>共同好友({{info.same_friend_num}}个)：</view> <image class='friends' wx:for='{{list}}' wx:if='{{index < 6}}' wx:key='index' src='/images/link.jpg'></image></view>
+       </block>
+    </view>
+  </view>
+<!--
+    hy   好友的id
+
+
+
+
+  -->

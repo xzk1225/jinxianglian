@@ -1,0 +1,46 @@
+<search bind:confirm='confirm' id='search'/>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='swiper'>
+  
+    <view class='carousel_box'>
+    <navigator hover-class="none" url='../../resume/index' class='carousel'>
+           <image src='/images/cp_xt.jpg'></image><text>大专</text>
+    </navigator>
+       <navigator hover-class="none" url='../../resume/index' class='carousel'>
+                <image src='/images/cp_tg.jpg'></image><text>其它</text>
+        </navigator>
+     <navigator hover-class="none" url='../../resume/index' class='carousel'>
+            <image src='/images/cp_jj.jpg'></image><text>硕士</text>
+     </navigator>
+      <navigator hover-class="none" url='../../resume/index' class='carousel'>
+                <image src='/images/cp_p2p.jpg'></image><text>研究生</text>
+       </navigator>
+      <navigator hover-class="none" url='../../resume/index' class='carousel'>
+            <image src='/images/cp_bx.jpg'></image><text>博士</text>
+       </navigator>
+   
+     <navigator hover-class="none" url='../../resume/index' class='carousel'>
+            <image src='/images/cp_bx.jpg'></image><text>本科</text>
+       </navigator>
+      <!-- <view class='carousel'><image src='/images/cp_tg.jpg'></image><text>托管</text></view>
+      <view class='carousel'><image src='/images/cp_jj.jpg'></image><text>基金</text></view>
+      <view class='carousel'><image src='/images/cp_p2p.jpg'></image><text>P2P</text></view>
+      <view class='carousel'><image src='/images/cp_bx.jpg'></image><text>保险</text></view> -->
+    </view>
+  
+</view>
+<line bgColor='#f5f5f5' high='24rpx' />
+<lineer text='推荐简历' bord />
+<block wx:for='{{list}}' wx:key='index'>
+<navigator hover-class="none" url='../../resume/pages/jianlixiangq?id={{item.id}}&user_id={{item.user_id}}'>
+<jianli info='{{item}}' />
+</navigator>
+</block>
+<line heig='12rpx' />

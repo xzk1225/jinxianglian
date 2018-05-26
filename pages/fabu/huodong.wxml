@@ -1,0 +1,153 @@
+<form bindsubmit="formSubmit" report-submit='true'>
+<view class='page'>
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>活动名称</text> <view><input name='name' placeholder='请输入活动名称' right></input></view>
+  </view>
+</view>
+<view class='page_box' bindtap='bindRegionChange'>
+  <view class='page_list'>
+      <text>活动地点</text> <view><text wx:if='{{region.length>1}}'>{{region[0]}}-{{region[1]}}-{{region[2]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>活动详细地点</text> <view><input name='addr' placeholder='请输入活动详细地点' right></input></view>
+  </view>
+</view>
+
+<picker mode="date" name='start_time' data-name='start_time' value="{{start_time}}" start="2018-4-13" bindchange="bindDateChange">
+
+<view class='page_box'>
+  <view class='page_list'>
+      <text>开始时间</text> <view><text wx:if='{{start_time}}'>{{start_time}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+  </picker>
+<!-- <view class='page_box'>
+  <view class='page_list'>
+      <text>开始时间</text> <view><text>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view> -->
+
+
+<picker mode="date" name='end_time' data-name='end_time' value="{{end_time}}" start="2018-4-13" bindchange="bindDateChange">
+
+<view class='page_box'>
+  <view class='page_list'>
+      <text>结束时间</text> <view><text wx:if='{{end_time}}'>{{end_time}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+  </picker>
+
+
+<!-- 
+
+<view class='page_box'>
+  <view class='page_list' style='flex-direction: column;'>
+      <text>上传海报</text> 
+      <view class='img_box'>
+            <image class='tianjia' src='{{img ? img : "/images/fb_tianjia.jpg"}}'></image>
+      </view>
+  </view>
+</view> -->
+
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>活动人数</text> <view><input type='number' name='num' placeholder='请输入活动人数' right></input></view>
+  </view>
+</view>
+
+<view class='page_box'>
+  <view class='page_list jz'>
+      <text>活动费用</text> <view><input type='number' name='fee' placeholder='请输入活动费用' right></input></view>
+  </view>
+</view>
+<!-- <view class='page_box'>
+  <view class='page_list'>
+      <text>活动分类</text> <view><text>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view> -->
+
+<view class='page_box' bindtap='leixing' data-id='cates' data-arr='catesarr'>
+  <view class='page_list'>
+      <text>行业/活动分类类别</text> <view><text wx:if='{{cates>-1}}'>{{catesarr[cates]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+  </view>
+</view>
+
+
+<view class='page_box no'>
+  <view class='page_list' style='flex-direction: column;'>
+      <text>详细内容</text> 
+      <textarea class='txt' name='content' placeholder='请输入详细内容'></textarea>
+  </view>
+
+<view class='page_box no'>
+
+<view class='page_box no'>
+  <view class='page_list' >
+      
+      <view style='display:flex;'>
+      <text>推荐</text> 
+        <radio-group class="radio-group" bindchange='chang'>
+  <label class="radio" >
+    <radio value="0" checked='true' />否
+  </label>
+  <label class="radio" >
+    <radio value="1" />是
+  </label>
+</radio-group>
+      
+      </view>
+  </view>
+  </view>
+  
+  
+</view>
+
+<block wx:if='{{val}}'>
+<view bindtap="bindRegionChange" >
+   <view class='page_box no'>
+  <view class='page_list border' style='align-items: center;'>
+     <text> {{region[0]}}-{{region[1]}}-{{region[2]}}</text><image class='san' src='/images/sanjiao.jpg'></image>
+  </view>
+</view>
+  </view>
+<!--推荐的天数  -->
+  <picker bindchange="bindPickerChange" value="{{index+1}}" range="{{tianshu}}">
+  <view class='page_box no'>
+  <view class='page_list border' style='align-items: center;'>
+     <text wx:if='{{week}}'>{{tianshu[week]}}</text><text wx:else>周数</text><image class='san' src='/images/sanjiao.jpg'></image>
+  </view>
+</view>
+   
+  </picker>
+
+<view class='page_box no'>
+  <view class='jifen'>
+<text>我的积分：{{money}}</text>
+<text>需要积分：{{integral}}</text>
+</view>
+</view>
+</block>
+<view class='page_box no'>
+  <view class='jifen but'>
+  <button class='text' formType="submit" style='background:#47adea;color:white;'> 立即发布</button>
+<!-- <text style='background:#47adea;color:white;'>立即发布</text> -->
+
+</view>
+</view>
+
+</view>
+</view>
+
+
+</form>
+
+
+
+
+
+<city id='city' bind:confirmEvent='_confirmEvent' bind:cancelEvent='_cancelEvent'/>
+

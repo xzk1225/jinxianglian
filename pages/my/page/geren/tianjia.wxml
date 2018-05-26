@@ -1,0 +1,11 @@
+
+<input value='{{str}}' bindinput='cheng' placeholder='{{placeholder}}' type='{{type}}'></input>
+<block wx:if='{{display}}'>
+<view class='box'>
+<input placeholder='请输入验证码' bindchange='changee'></input><form bindsubmit="code" report-submit='true'>
+<button formType="submit" disabled='{{disabled}}'>{{text}}</button>
+</form>
+
+</view>
+</block>
+<view class='but' bindtap='done'>完成</view>

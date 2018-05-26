@@ -1,0 +1,39 @@
+<form bindsubmit="formSubmit" report-submit='true'>
+<view class='header'>
+  <text>我的工作经历</text>
+</view>
+<view class='content'>
+<view class='content_list'>
+<text>公司</text>
+<view><input name='name' placeholder='请输入公司名称'></input></view>
+</view>
+</view>
+<view class='content'>
+<view class='content_list'>
+<text>职位</text>
+<view><input name='job' placeholder='请输入公司职位'></input></view>
+</view>
+</view>
+<picker class='content' mode="date" name='start_time' data-name='start_time' value="{{start_time}}"  bindchange="bindDateChange">
+   
+<view class='content_list'>
+<text>开始时间</text>
+<view> {{start_time}}<image src='/images/yjt.jpg'></image></view>
+</view>
+  </picker>
+
+<picker class='content' mode="date" name='end_time' data-name='end_time' value="{{end_time}}" bindchange="bindDateChange">
+<view class='content_list'>
+<text>结束时间</text>
+<view> {{end_time}}<image src='/images/yjt.jpg'></image></view>
+</view>
+  </picker>   
+<view class='header'>
+  <text>经历描述</text>
+</view>
+<view class='content'>
+<textarea name='desc' placeholder='工作职责简要描述您在岗职位的工作内容或职责范围等'></textarea>
+</view>
+<button formType="submit">保存</button>
+
+</form>

@@ -1,0 +1,81 @@
+<view class='content'>
+      <view class='content_box'>
+            <image src='{{info.user_avatar}}'></image>
+            <view class='info'>
+                <view style='font-size:30rpx;color:black;'>{{info.job}}</view>
+                <view style='overflow: hidden;text-overflow:ellipsis;white-space: nowrap;'>{{info.describe}}</view>
+                     <view>{{industry[info.industry]}}  | {{jyarr[info.work_year]}} | {{xlarr[info.edu]}}</view>
+            </view>
+            <view class='salary'>
+                   <text style='color:#53a7f0;'>￥{{xcarr[info.wage]}}</text>
+                  <text>{{info.add_time}}</text>
+            </view>
+      </view>
+</view>
+<view class='zw'>
+  <view><image src='/images/yan.jpg'></image>{{info.view_num}}</view>
+   <view style='border-left:2rpx solid #eee;border-right:2rpx solid #eee;height:37rpx;'><image src='/images/xin.jpg'></image>{{info.like_num}}</view>
+   <view><image src='/images/zw_xq.jpg'></image>333</view>
+</view>
+<line />
+
+<lineer yuan text='职位亮点' color='#3194e9' />
+  <view class='liangdian'>{{info.advantage}}</view>
+
+
+
+<lineer yuan text='职位描述' color='#3194e9' />
+<view class='liangdian'>{{info.describe}}</view>
+<!-- <lineer yuan text='公司介绍' color='#3194e9' />
+<view class='liangdian'>{{info}}</view> -->
+<view class='sc_box'>
+<view class='sc'>
+  <view class='sc_left'>
+        <navigator url='./jb?id={{id}}' class='sc_list'><image src='/images/jb.png'></image><text>举报</text></navigator>
+        <view class='sc_list' bindtap='sc'><image wx:if='{{info.is_like==0}}' src='/images/sc.png'></image><image wx:else src='/images/sc1.png'></image><text>收藏</text></view>
+      </view>
+  <!-- <view class='sc_right'>投递简历</view> -->
+  </view>
+</view>
+<line  />
+<lineer text='最近访客' url='./zuijin?id={{id}}'/>
+<view class='laifang_bx'>
+      <view class='laifang' >
+        <block wx:for='photo' wx:for-item="itemName">
+              <navigator url='/pages/renmai/index?id={{itemName.id}}'>
+                    <image  src='{{itemName.user_avatar}}'></image>
+              </navigator>
+        </block>
+            
+      </view>
+</view>
+<line  />
+<lineer text='职位发布人' />
+<star me='0' info='{{userInfo}}' />
+<line  />
+<lineer text='他发布的其它职位' url='../gengduo/zhiwei?id={{id}}&user_id={{user_id}}'/>
+<view class='content'>
+      <view class='content_box'>
+            <image src='{{zwlist.user_avatar}}'></image>
+            <view class='info'>
+                <view style='font-size:30rpx;color:black;'>{{zwlist.job}}</view>
+                <view style='overflow: hidden;text-overflow:ellipsis;white-space: nowrap;'>{{zwlist.describe}}</view>
+                  <view>{{zwlist.industry}}  | {{zwlist.work_year}} | {{zwlist.edu}}</view>
+            </view>
+            <view class='salary'>
+                  <text style='color:#53a7f0;'> {{zwlist.wage}}</text>
+                  <text>{{zwlist.add_time}}</text>
+            </view>
+      </view>
+</view>
+
+
+
+
+
+
+<!--下方绑定  -->
+<view class='bottom'>
+<text bindtap='sc'>收藏</text>
+<view bindtap='td'>投递简历</view>
+</view>

@@ -1,0 +1,14 @@
+
+.headere{display: flex;height: 90rpx;border-bottom:2rpx solid #e0e0e0;}
+.headere .text{width: 50%;display: flex;justify-content: center;align-items: center;font-size: 30rpx;color: #757575;position: relative;}
+.line{position: absolute;bottom: 0;height: 4rpx;width: 100%;background: #2e94e8;left: 0;}
+
+.sc{padding: 20rpx 0rpx 0rpx 20rpx; display: flex;justify-content: center;border-top: #e2e2e2 solid 2rpx;}
+.sc image{width: 129rpx;height: 129rpx;}
+.sc_box{width: 100%;display: flex;justify-content: space-between;}
+.sc_info{display: flex;flex-direction: column;font-size: 30rpx;line-height: 50rpx;margin-left: 20rpx;color: #4a4a4a;width: 580rpx;}
+#bj{width: 22rpx;height: 20rpx;}
+.bj{font-size: 28rpx;color: #2e92ea;margin-right: 30rpx; }
+.shi image{width: 40rpx;height: 30rpx;margin-right: 10rpx;}
+.shi{display: flex;height: 80rpx;align-items: center;border-top: 2rpx solid #e6e6e6;justify-content: space-between;margin-top: 20rpx;}
+.fb{width: 90rpx;height: 90rpx;position: fixed;bottom: 50rpx;right: 44rpx;}

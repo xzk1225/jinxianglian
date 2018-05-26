@@ -1,0 +1,16 @@
+.header_box{height: 127rpx;display: flex;justify-content: space-around; align-items: center;background: #f8f8f8;flex-direction: column;position: relative;z-index: 2222;}
+.header{width: 704rpx;height: 78rpx;background: white;border-radius: 10rpx;border: 4rpx solid #d5d5d5;justify-content: space-between;display: flex;align-items: center;}
+.header input{line-height: 78rpx;height: 78rpx;padding-left: 15rpx;width: 95%;display: inline-flex}
+.header image{width: 38rpx;height: 38rpx;display: inline-flex;margin-right: 15rpx;}
+.list_box{width: 100%; position: absolute;top: 106rpx;display: flex;background: #fff;justify-content: center;flex-direction: column;align-items: center;}
+.list_li{display: flex;height: 135rpx;align-items: center;width: 704rpx;font-size: 32rpx;line-height: 50rpx;}
+.list_li image{width: 98rpx;height: 98rpx;margin-right: 30rpx;}
+.position{font-size: 30rpx;color:#676767;}
+
+
+.navig{width: 704rpx;position: absolute;top: 106rpx;background: white;}
+.list{background: white; height: 80rpx;display: flex;font-size: 32rpx; }
+.list_boxx{width: 706rpx;align-items: center;display: flex;justify-content: space-between;}
+.list image{width: 38rpx;height: 38rpx;}
+.tongshi{display: flex;align-items: center;}
+

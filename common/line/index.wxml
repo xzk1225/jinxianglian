@@ -1,0 +1,1 @@
+<view style='background:{{bgColor}};height:{{heig}};border-top:{{bt}};brder-bottom:{{bb}}' class='linee'></view>

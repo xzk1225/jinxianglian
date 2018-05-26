@@ -1,0 +1,20 @@
+
+  <view class="picker" wx:if="{{pikerScenes}}"> 
+  <view class="picker-closed">
+     <text class="float-li" bindtap='pikerCancel'>取消</text>
+     <text class="float-li-rig" style='color: green' bindtap='pikerConfirm'>确认</text>
+   </view>
+   <view class="picker-view">
+       <picker-view indicator-style="height: 50px;" value="{{value}}" bindchange="bindChange">
+         <picker-view-column>
+           <view wx:key='index' wx:for="{{province}}" style="line-height: 50px" wx:for-item="vo" data-province-id="{{vo.regid}}">{{vo.regname}}</view>
+         </picker-view-column>
+         <picker-view-column>
+           <view wx:key='index' wx:for="{{city}}" style="line-height: 50px" wx:for-item="vo" data-city-id="{{vo.regid}}">{{vo.regname}}</view>
+         </picker-view-column>
+         <picker-view-column>
+           <view wx:key='index' wx:for="{{area}}" style="line-height: 50px" wx:for-item="vo" data-area-id="{{vo.regid}}">{{vo.regname}}</view>
+         </picker-view-column>
+       </picker-view>
+   </view>
+ </view>
