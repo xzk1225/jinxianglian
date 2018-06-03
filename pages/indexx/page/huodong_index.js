@@ -44,6 +44,13 @@ Page({
         list: res.data.result
       })
     })
+    reques.getdata({ data: 'public/ads' }, { position: 2 }).then(res => {  //  轮播图
+      if (!res.data.result.length < 1) {
+        that.setData({
+          imgUrls: res.data.result
+        })
+      }
+    })
   },
 
   /**

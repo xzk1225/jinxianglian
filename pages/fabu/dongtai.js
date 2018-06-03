@@ -105,6 +105,13 @@ Page({
         //   path: that.data.images_arr,
         //   data: { access_token: wx.getStorageSync('token'), content: this.data.val, }
         // })
+        if(!this.data.images_arr){
+        wx.showToast({
+          title: '请添加图片',
+          icon:'none'
+        })
+        return 
+        }
         reques.up(that.data.images_arr[0], { access_token: wx.getStorageSync('token'), content: this.data.val }, 'pic_list').then(res=>{
           console.log(res.data)
           res.data = JSON.parse(res.data)

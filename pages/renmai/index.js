@@ -103,7 +103,7 @@ Page({
   onShareAppMessage: function () {
   
   },
-  add() {
+  add(e) {
     // 表单id
     reques.getdata({ data: 'public/saveMpFormID' }, { access_token: wx.getStorageSync('token'), id: e.detail.formId })
 

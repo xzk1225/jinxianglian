@@ -67,7 +67,7 @@
 </form>
 </navigator>
 
-<navigator wx:if='{{cert==0}}' hover-class="none" hover-class="none" url='/pages/my/page/renzheng'>
+<navigator wx:if='{{!cert}}' hover-class="none" hover-class="none" url='/pages/my/page/renzheng'>
 <view class='index_line'></view>
 <form bindsubmit="formSubmit" report-submit="true">
   <button hover-class='none' formType="submit">
@@ -122,7 +122,7 @@
   <view class='star'><view><text style='color:#111111;'>附近人脉</text> </view></view>
   <block wx:for='{{list}}' wx:key='index'>
   <navigator url='../renmai/index?id={{item.user_id}}'>
-   <star hy='{{item.user_id}}' me='0' info='{{item}}' bind:add='add'/> 
+   <star hy='{{item.user_id}}' me='0' info='{{item}}' distance='true' bind:add='add'/> 
     <!-- <star  me='0' info='{{item}}' distance='true'  bind:add='add'/> -->
   </navigator>
   </block>

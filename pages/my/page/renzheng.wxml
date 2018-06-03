@@ -1,6 +1,6 @@
 <view class='page'>
 <image class='header' src='/images/rz.jpg'></image>
-<text>本平台主要专注于人员服务</text>
+<text>本平台主要专注服务于金融从业人员服务</text>
 <text style='font-weight:800'>请上传材料证明职业身份</text>
 </view>
 <view class='conter'>

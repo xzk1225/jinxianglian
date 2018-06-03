@@ -93,7 +93,7 @@
 
 </view> 
 
-   <form bindsubmit="add" report-submit="true" wx:if='{{is_friend==0}}'>
+   <form bindsubmit="add" report-submit="true" wx:if='{{!is_friend}}'>
 
 <button hover-class='none' formType="submit" >交换名片</button>
  

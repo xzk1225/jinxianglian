@@ -83,7 +83,7 @@ Page({
     this.getdata()
   }
   var that = this;
-  reques.getdata({ data: 'public/ads' }, { position: 0 }).then(res => {  //  轮播图
+  reques.getdata({ data: 'public/ads' }, { position: 1 }).then(res => {  //  轮播图
   if(!res.data.result.length<1){
     that.setData({
       imgUrls: res.data.result
@@ -112,19 +112,10 @@ Page({
 
   },
 getdata(){
-
   var lat = '', lon = '', data = {},that=this;
-
-
-
-
-
-
   wx.getLocation({
     type: 'gcj02',
     success: function (res) {
-     
-
       lat = res.latitude
       lon = res.longitude
       data = { access_token: wx.getStorageSync('token'), type: 2, lat: lat, lon: lon };
@@ -137,24 +128,15 @@ getdata(){
 
     // 获取用户详情
       reques.getdata({ data: 'user/userInfo' }, { access_token: wx.getStorageSync('token'), user_id:0}).then(res => {  // 附近的人。
-   
         that.setData({
           cert: res.data.result.cert
         })
-        
       });
-
-
       reques.getdata({ data: 'group/list' }, { access_token: wx.getStorageSync('token'), type: 0, num: 6, p: 1 }).then(res => {// 推荐的群组。
         that.setData({
           group_list: res.data.result
         })
-        
       });
-
- 
-
-
     }
   });
 },

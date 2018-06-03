@@ -42,18 +42,18 @@
 </view>
 <line style='width:100%;' />
 <view class='line'><image src='/images/cp_jj.jpg'></image>附近的群</view>
-<navigator hover-class="none" url='../xiangqing/group'>
+<navigator  hover-class="none" url='../xiangqing/group?id={{item.id}}' wx:for='{{list}}'>
 <view class='content group'>
     <view class='group_list'>
       <view class='list_left'>
           <image class='photo' src='/images/link.jpg'></image>
-          <view style='margin-left:20rpx;'>
-              <text>激情娱乐</text>
-              <view class='xiao_bg' ><image class='xiao' src='/images/cp_jj.jpg'></image>2</view>
-              <view style='font-size:24rpx;color:#696969;'>想几千嘛?那就一起来吧</view>
+          <view>
+              <text>{{item.name}}</text>
+              <view class='xiao_bg' ><image class='xiao' src='/images/cp_jj.jpg'></image>{{item.member_num}}</view>
+              <view style='font-size:24rpx;color:#696969;'>{{item.desc}}</view>
           </view>
       </view>
-      <view class='list_right'>北京市朝阳区</view>
+      <view class='list_right'>{{item.area}}</view>
     </view>
 </view>
 </navigator>
