@@ -6,10 +6,11 @@
   </view>
   <view class='info_box box'>
     <view class='inf_header'>加入要求</view>
-    <text>1、金融公司高管，每公司仅限一名。</text>
-    <text>2、3年从业经验。</text>
-    <text>2、完善个人信息。</text>
-    <text>2、通过审核。</text>
+    <text>1、完善个人信息；</text>
+    <text>2、实名认证、职位认证；</text>
+    <text>3、金融从业3年以上；</text>
+    <text>4、总监及总监以上职位；</text>
+    <text>5、通过管理员审核。</text>
   </view>
   <view class='info_box'>
     <view class='inf_header'>申请加入</view>
@@ -20,18 +21,16 @@
     </view>
   </view>
     
-<picker bindchange="bindPickerChange" data-type='ly'  value="{{index}}" range="{{newarr}}">
-<view class='city' ><text>{{newarr[index]}}</text><image class='san' src='/images/sanjiao.jpg'></image></view>
+  <picker bindchange="bindPickerChange" data-type='ly'  value="{{index}}" range="{{newarr}}">
+    <view class='city' ><text>{{newarr[index]}}</text><image class='san' src='/images/sanjiao.jpg'></image></view>
   </picker>
 
-     <picker bindchange="bindPickerChange" data-type='num' value="{{index}}" range="{{arr}}">
-<view class='city' ><text>{{num}} </text><image class='san' src='/images/sanjiao.jpg'></image></view>
+  <picker bindchange="bindPickerChange" data-type='num' value="{{index}}" range="{{arr}}">
+    <view class='city' ><text>{{num}} </text><image class='san' src='/images/sanjiao.jpg'></image></view>
+  </picker>   
+</view>
 
-  </picker>
-     
-     
-  </view>
-  <view class='jifen'>
+<view class='jifen'>
 <text>我的积分:{{mone}}</text>
 <text>需要积分:{{integral}}</text>
 </view>

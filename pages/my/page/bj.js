@@ -127,15 +127,8 @@ Page({
     this.getdata();
     const that = this;
     reques.getdata({ data: 'user/userInfo' }, { access_token: wx.getStorageSync('token') }).then(res => {
-
       that.setData({
-        info: res.data.result,
-        [province]: res.data.result.province,
-        [city]: res.data.result.city,
-        [district]: res.data.result.district,
-        [home_province]: res.data.result.home_province,
-        [home_city]: res.data.result.home_city,
-        [home_district]: res.data.result.home_district
+        info: res.data.result
       })
 
     })

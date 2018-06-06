@@ -72,7 +72,12 @@
 
 <view class='page_box' bindtap='leixing' data-id='cates' data-arr='catesarr'>
   <view class='page_list'>
-      <text>行业/活动分类类别</text> <view><text wx:if='{{cates>-1}}'>{{catesarr[cates]}}</text><text wx:else>必选</text><image class='yjt' src='/images/yjt.jpg'></image></view>
+      <text>行业/活动分类类别</text>
+      <view>
+        <text wx:if='{{cates>-1}}'>{{catesarr[cates]}}</text>
+        <text wx:else>必选</text>
+        <image class='yjt' src='/images/yjt.jpg'></image>
+      </view>
   </view>
 </view>
 

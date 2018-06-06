@@ -19,7 +19,7 @@ Page({
     circular: true,
     list:'',
     lxarr: app.globalData.industry,
-    catesarr: ['创业', '公益', '亲子', '科技', '运动'],
+    catesarr: ['路演调研', '外出郊游', '同行交流', '金融峰会'],
     tianshu: app.globalData.tianshu
   },
 

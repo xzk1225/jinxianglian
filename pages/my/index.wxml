@@ -7,15 +7,28 @@
   </view>
 <view class='page'>
 <navigator hover-class="none" url='./page/bj'>
-       <view class='contener_list'><view><image class='left_img' src='/images/my_fk.jpg'></image>个人资料</view><text class="iconfont  icon-youjiantou1"></text></view>
- </navigator> 
+  <view class='contener_list'>
+    <view>
+      <image class='left_img' src='/images/my_fk.jpg'></image>个人资料
+    </view>
+    <text class="iconfont  icon-youjiantou1"></text>
+  </view>
+</navigator> 
 
-   <navigator hover-class="none" url='./page/renzheng'>
-    <view class='contener_list rz'><view><image class='left_img' src='/images/my_rz.jpg'></image>认证</view><view class='ren'><text>未认证</text>
-    <!-- <image src='/images/yjt.jpg' class='yjt'></image> -->
-    <text class="iconfont yjt icon-youjiantou1"></text>
-    </view></view>
-   </navigator>
+<navigator hover-class="none" url='./page/renzheng'>
+  <view class='contener_list rz'>
+      <view>
+        <image class='left_img' src='/images/my_rz.jpg'></image>认证
+      </view>
+   
+      <view class='ren'>
+
+        <text wx:if='{{info.cert!=1}}'>未认证</text><text wx:else>已认证</text>
+        <!-- <image src='/images/yjt.jpg' class='yjt'></image> -->
+        <text class="iconfont yjt icon-youjiantou1"></text>
+      </view>
+  </view>
+</navigator>
 
       <navigator hover-class="none" url='./page/finance'>
           <view class='contener_list'><view><image class='left_img' src='/images/jrb.jpg'></image>积分</view><text class="iconfont  icon-youjiantou1"></text></view>

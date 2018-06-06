@@ -7,7 +7,7 @@ Page({
    */
   data: {
     array:[
-      { name: 123123, id: 121 }, { name: 123123, id: 121 }, { name: 123123, id: 121 }, { name: 123123, id: 121 }, { name: 123123, id: 121 }
+      { name: 暂无数据, id: 121 }
     ],
     id:0,
     p:1,

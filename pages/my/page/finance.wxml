@@ -14,7 +14,7 @@
          <image src='/images/link.jpg'></image>
       <view class='list_box'>
           <text>邀请</text>
-          <text style='font-size:28rpx;color:#8b8b8b;'>每邀请一位，通过认证，可获20</text>
+          <text style='font-size:28rpx;color:#8b8b8b;min-width:412rpx;'></text>
       </view>
      </view>
       <button class='yq' bindtap='yq' open-type="share">邀请</button>
@@ -27,7 +27,7 @@
          <image src='/images/link.jpg'></image>
       <view class='list_box'>
           <text>实名认证</text>
-          <text style='font-size:28rpx;color:#8b8b8b;'>每邀请一位，通过认证，可获20</text>
+          <text style='font-size:28rpx;color:#8b8b8b;min-width:412rpx;'></text>
       </view>
      </view>
       <navigator hover-class="none" url='./renzheng'><view class='yq' bindtap='yq'>认证</view></navigator>
@@ -40,7 +40,7 @@
          <image src='/images/link.jpg'></image>
       <view class='list_box'>
           <text>完善个人资料</text>
-          <text style='font-size:28rpx;color:#8b8b8b;'>每邀请一位，通过认证，可获20</text>
+          <text style='font-size:28rpx;color:#8b8b8b;min-width:412rpx;'></text>
       </view>
      </view>
       <navigator hover-class="none" url='./renzheng'><view class='yq' bindtap='yq'>完善</view></navigator>
@@ -53,10 +53,10 @@
          <image src='/images/link.jpg'></image>
       <view class='list_box'>
           <text>发布信息</text>
-          <text style='font-size:28rpx;color:#8b8b8b;'>每邀请一位，通过认证，可获20</text>
+          <text style='font-size:28rpx;color:#8b8b8b;min-width:412rpx;'></text>
       </view>
      </view>
-      <navigator hover-class="none" url='../../fabu/zhiwei'><view class='yq' bindtap='yq'>活动</view></navigator>
+      <navigator hover-class="none" url='../../fabu/huodong'><view class='yq' bindtap='yq'>发布</view></navigator>
     </view>
     </view>
 </block>

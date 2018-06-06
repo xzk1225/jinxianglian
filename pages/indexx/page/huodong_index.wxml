@@ -1,9 +1,9 @@
 <search bind:confirm='confirm' id='search'/>
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
-  <block wx:for="{{imgUrls}}">
+  <block wx:for="{{imgUrls}}" wx:key='{{key}}'>
     <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      <image src="{{item.img}}" class="slide-image" width="355" height="150"/>
     </swiper-item>
   </block>
 </swiper>
@@ -12,24 +12,18 @@
   
     <view class='carousel_box'>
     <navigator hover-class="none" url='./huodong' class='carousel'>
-           <image src='/images/cp_xt.jpg'></image><text>亲子</text>
+           <image src='/images/cp_xt.jpg'></image><text>路演调研</text>
     </navigator>
        <navigator hover-class="none" url='./huodong' class='carousel'>
-                <image src='/images/cp_tg.jpg'></image><text>创业</text>
+                <image src='/images/cp_bx.jpg'></image><text>外出郊游</text>
         </navigator>
      <navigator hover-class="none" url='./huodong' class='carousel'>
-            <image src='/images/cp_jj.jpg'></image><text>运动</text>
+            <image src='/images/cp_p2p.jpg'></image><text>同行交流</text>
      </navigator>
       <navigator hover-class="none" url='./huodong' class='carousel'>
-                <image src='/images/cp_p2p.jpg'></image><text>轰趴</text>
+                <image src='/images/cp_tg.jpg'></image><text>金融峰会</text>
        </navigator>
-      <navigator hover-class="none" url='./huodong' class='carousel'>
-            <image src='/images/cp_bx.jpg'></image><text>聚会</text>
-       </navigator>
-   
-     <navigator hover-class="none" url='./huodong' class='carousel'>
-            <image src='/images/cp_bx.jpg'></image><text>露营</text>
-       </navigator>
+
       <!-- <view class='carousel'><image src='/images/cp_tg.jpg'></image><text>托管</text></view>
       <view class='carousel'><image src='/images/cp_jj.jpg'></image><text>基金</text></view>
       <view class='carousel'><image src='/images/cp_p2p.jpg'></image><text>P2P</text></view>

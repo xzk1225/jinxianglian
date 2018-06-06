@@ -2,9 +2,9 @@ var md5 = require('md5.js')
 function getData(url, data) {
   let that=this;
   if (url.url) {
-    var http = 'https://www.gxfcbj.com/v/web/index.php/'
+    var http = 'https://api.gxfcbj.com/v/web/index.php/'
   } else {
-    var http = 'https://www.gxfcbj.com/'
+    var http = 'https://api.gxfcbj.com/'
   }
   var date = sign(data)
     return new Promise((resolve, reject) => {

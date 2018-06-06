@@ -1,7 +1,8 @@
 /* pages/indexx/chanpin/index.wxss */
 .bg{height: 264rpx;width: 100%;}
 .carousel image{width: 100rpx;height: 100rpx;}
-.carousel_box{display: flex;font-size: 24rpx;align-items: center;flex-wrap: wrap;}
+.carousel_box{display: flex;font-size: 24rpx;align-items: center;flex-wrap: wrap;padding-bottom:25rpx;
+}
 .carousel{display: flex;flex-direction: column;justify-content: center;align-items: center;width: 25%;margin-top: 25rpx;}
 swiper{height: 220rpx;}
 .carousel text{margin-top: 18rpx;}

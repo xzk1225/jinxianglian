@@ -12,11 +12,13 @@
               <text>{{info.company}}</text>
           </view>
       </view>
-      <view>未认证</view>
+      <view><text wx:if='{{info.cert!=1}}'>未认证</text><text wx:else>已认证</text></view>
+
+      
     </view>
 
 </view>
 <view class='up'>
-    <image bindtap='upload' class='bg' src='{{avatar ? avatar :"/images/rz_bg.jpg"}}'></image>
+    <image bindtap='upload' class='bg' src='{{info.cert_img ? info.cert_img :"/images/rz_bg.jpg"}}'></image>
 </view>
 <view class='tijiao' bindtap='submit'>提交</view>

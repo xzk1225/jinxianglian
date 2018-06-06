@@ -17,15 +17,13 @@ Page({
   onLoad: function (options) {
     const token = wx.getStorageSync('token');
     var  that=this ,arr=[],str={};
-    reques.getdata({ data:'public/tags'}).then(res=>{
-      console.log(res.data)
+    reques.getdata({ data:'user/tags'}).then(res=>{
+
     for (var k in res.data.result){
-      console.log('k',k)
-      for(var key in res.data.result[k].list){
-        str = { id: res.data.result[k].id, name: res.data.result[k].name}
-        
-        arr.push(str)
-      }
+      str = { id: k, name: res.data.result[k] };
+
+      arr.push(str)
+      
     }
         that.setData({
           items:arr

@@ -15,7 +15,7 @@ Page({
     field:'领域',
     tian:'天数',
     fields:['aasdasd','asdasdasd','asdasdas'],
-    arr: ['1周', '2周', '3周', '4周', '5周', '6周', '7周', '8周', '9周', '10周'],
+    arr: ['1周', '2周', '3周', '4周'],
     money:'',
     integral:0,
     id:''// id 为板块的id值
@@ -48,6 +48,7 @@ Page({
       for (var key in arr) {
         newarr.push(arr[key].name)
       }
+      console.log(newarr);
       this.setData({
         newarr: newarr
       })
@@ -116,7 +117,7 @@ Page({
     if (e.target.dataset.type == 'num') { //  num 为周数选择
 
       this.setData({
-        num: Number(e.detail.value)+1+'周',
+        num: Number(e.detail.value)+1,
         integral: (Number(e.detail.value) + 1) * that.data.money
       })
 
