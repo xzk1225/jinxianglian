@@ -1,6 +1,0 @@
-/* pages/indexx/gengduo/chanpin.wxss */
-.content{display: flex;justify-content: center;border-bottom: 2rpx solid #eee;}
-.content_box{width: 704rpx;padding: 30rpx 0rpx;display: flex;font-size: 25rpx;line-height: 50rpx;color: #b9b9b9;}
-.content_box image{width: 129rpx;height: 129rpx;}
-.info{margin-left: 24rpx;display: flex;flex-direction: column;width: 547rpx;}
-.info_list{display: flex;justify-content: space-between;}

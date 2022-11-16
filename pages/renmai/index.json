@@ -1,9 +1,0 @@
-
-{
-  "navigationBarTitleText": "用户信息",
-  "usingComponents": {
-    "star": "/common/details/index",
-    "line": "/common/line/index",
-    "lineer": "/common/linner/index"
-  }
-}

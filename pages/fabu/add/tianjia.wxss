@@ -1,6 +1,0 @@
-/* pages/my/page/geren/tianjia.wxss */
-page{display: flex;justify-content: center;align-items: center;flex-direction: column;}
-checkbox-group{width: 704rpx;font-size: 30rpx;margin-top: 20rpx;margin-bottom: 60rpx;display: flex;flex-wrap: wrap;}
-.but{background: #349df8;color: #fff;height: 90rpx;width: 704rpx;display: flex;justify-content: center;align-items: center;}
-checkbox{transform: scale(0.8,0.8)}
-label{padding: 10rpx;margin-right: 13rpx;margin-top: 10rpx;}

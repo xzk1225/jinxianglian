@@ -1,3 +1,0 @@
-<view class='title'>{{info.title}}这是标题</view>
-<view class='time'>{{info.add_time}}这是时间</view>
-<view class='content'>{{info.content}}奥术大师大所大所大所大所大所大所大大所大萨达阿萨德阿萨德阿萨德碍事大神啊</view>

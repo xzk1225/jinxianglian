@@ -1,7 +1,0 @@
-/* pages/fabu/dongtai.wxss */
-page{background: #f8f8f8;}
-.page{display: flex;justify-content: center;align-items: center;flex-direction: column;background: white;}
-.page textarea{width: 704rpx;font-size: 30rpx;margin-top: 35rpx;}
-.img_box{width: 704rpx;padding-bottom: 28rpx;}
-.img_box image{width: 105rpx;height: 105rpx;}
-.but{width: 704rpx;height:80rpx;background: #4395FF;display: flex;justify-content: center;align-items: center;color: #fff;margin-bottom: 100rpx;margin-top: 20rpx;}
